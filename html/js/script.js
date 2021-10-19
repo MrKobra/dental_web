@@ -1,5 +1,6 @@
 $(document).ready(function (){
     $('.about-us-slider').slick({
-        dots: true
+        dots: true,
+        infinite: false
     })
 })
