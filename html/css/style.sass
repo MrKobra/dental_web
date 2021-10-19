@@ -277,3 +277,58 @@
   &-slide-img
     width: 100%
     height: 450px
+
+/* Stocks Form */
+.stocks-form
+  background: linear-gradient(84.27deg, #E6F2FF 0%, #FAF1ED 100%)
+  &-container
+    background: url(../img/stocks-form.png) no-repeat right bottom
+    padding: 80px
+  form
+    width: 580px
+    h2
+      font-family: $hFont, $mFont, sans-serif
+      font-size: 40px
+      line-height: 48px
+      margin: 0
+      span
+        color: #EA3938
+        font-size: 40px
+    p
+      font-size: 20px
+      line-height: 28px
+      margin: 20px 0 0
+      color: #172B52
+      a
+        color: $normal
+    input
+      &:not([type=submit])
+        width: 255px
+        height: 71px
+        border-radius: 5px
+        box-sizing: border-box
+        font-size: 24px
+        padding: 0 20px
+        color: #BBBBBB
+        border: none
+        &::-moz-placeholder
+          opacity: 1
+        &::-webkit-input-placeholder
+          opacity: 1
+      &[type=submit]
+        width: 295px
+        text-align: center
+        border: none
+        padding: 24px 0
+        transition: all .2s linear
+        margin-left: 20px
+        &:hover
+          cursor: pointer
+    span
+      font-size: 15px
+      line-height: 21px
+      color: #6C6C6A
+      display: inline-block
+      margin-top: 10px
+      a
+        border-bottom: 1px solid #6C6C6A
