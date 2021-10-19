@@ -148,3 +148,69 @@
       &:not(:first-child)
         flex-basis: 300px
         padding-left: 100px
+
+.service
+  padding: 115px 0 50px
+  &-container
+    display: flex
+    flex-wrap: wrap
+    margin: 20px -15px 0
+    align-items: center
+  &-card
+    margin: 30px 15px 0
+    border-radius: 20px
+    border: 1px solid #C3EBF9
+    box-sizing: border-box
+    &-text
+      width: 60%
+      padding: 40px 0 20px 30px
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+    h3
+      font-size: 24px
+      line-height: 29px
+      color: #172B52
+      font-weight: 500
+      margin: 0
+    p
+      font-size: 18px
+      line-height: 24px
+      margin: 10px 0 50px
+      color: #6C6C6A
+    a
+      font-size: 18px
+      line-height: 21px
+      color: $normal
+      position: relative
+      display: inline-block
+      padding-right: 28px
+      &:after
+        content: ''
+        width: 18px
+        height: 10px
+        background: url(../img/link-arrow-right.png) no-repeat center center
+        position: absolute
+        right: 0
+        top: 50%
+        margin-top: -5px
+    &:not(.last-card)
+      flex-basis: calc(33.33% - 30px)
+    &.last-card
+      flex-basis: calc(50% - 30px)
+  &-slogan
+    flex-basis: calc(50% - 30px)
+    margin: 30px 15px 0
+    h3
+      font-size: 24px
+      line-height: 29px
+      color: #172B52
+      font-weight: 500
+      margin: 0
+    p
+      font-size: 18px
+      line-height: 25px
+      color: #6C6C6A
+      margin: 15px 0 0
