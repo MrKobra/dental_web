@@ -161,3 +161,7 @@ wp-config.php
 
 
 # End of https://www.toptal.com/developers/gitignore/api/phpstorm,sass,wordpress
+.idea/vcs.xml
+.idea/modules.xml
+.idea/dental_web.iml
+html/start.bat
