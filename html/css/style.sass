@@ -332,3 +332,80 @@
       margin-top: 10px
       a
         border-bottom: 1px solid #6C6C6A
+
+/* Our Team */
+.our-team
+  padding: 150px 0 50px
+  .heading
+    span
+      width: 40%
+  &-container
+    display: flex
+    flex-wrap: wrap
+    row-gap: 30px
+    column-gap: 30px
+    margin-top: 50px
+  &-card
+    flex-basis: calc(33.33% - 22px)
+    border: 1px solid #C3EBF9
+    &-container
+      padding: 40px 30px
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+    h3
+      color: #172B52
+      margin: 20px 0 0
+      font-size: 19px
+      line-height: 29px
+      font-weight: 500
+    .specialize , .employee
+      color: #EA3938
+      font-size: 16px
+      line-height: 21px
+      padding-left: 23px
+      position: relative
+      margin: 5px 0
+    .specialize
+      &:before
+        content: ''
+        height: 19px
+        width: 18px
+        background: url(../img/our-team-icon.png) no-repeat center center
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -9px
+    .employee
+      &:before
+        content: ''
+        height: 19px
+        width: 12px
+        background: url(../img/our-team-employee.png) no-repeat center center
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -9px
+    p
+      font-size: 14px
+      line-height: 19px
+      color: #443E3E
+      margin: 10px 0 0
+    ul
+      margin: 10px 0 0
+      padding: 0
+      li
+        list-style: none
+        font-size: 14px
+        line-height: 21px
+        color: #6C6C6A
+    .request
+      margin-top: 20px
+      a
+        width: 100%
+        text-align: center
+  &-img
+    img
+      max-width: 100%
