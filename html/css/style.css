@@ -64,6 +64,23 @@ body {
   background: #0B2550;
 }
 
+.heading h2 {
+  font-family: "Gotham Pro", "Raleway", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  position: relative;
+  padding-bottom: 12px;
+}
+.heading h2:before {
+  content: "";
+  width: 97px;
+  height: 7px;
+  background: #38BCEA;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 /* Header Styles */
 .top-header-siteName {
   background: #38BCEA;
