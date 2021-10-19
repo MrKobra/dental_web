@@ -176,4 +176,66 @@ body {
   margin-top: -4px;
 }
 
+/* Stock Banner */
+.stocks-banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stocks-banner-text {
+  padding-left: 120px;
+  box-sizing: border-box;
+  flex-basis: 580px;
+}
+.stocks-banner-text span {
+  font-size: 18px;
+  line-height: 21px;
+  color: #6C6C6A;
+  display: block;
+}
+.stocks-banner-text h2 {
+  font-size: 50px;
+  color: #172B52;
+  font-family: "Gotham Pro", "Raleway", sans-serif;
+  margin: 10px 0;
+}
+.stocks-banner-text .btnLight {
+  margin-top: 50px;
+}
+.stocks-banner-img {
+  flex-basis: 680px;
+}
+.stocks-banner .advantages {
+  padding: 35px 0;
+}
+.stocks-banner .advantages-container {
+  display: flex;
+}
+.stocks-banner .advantages-card {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stocks-banner .advantages-card-img {
+  flex-basis: 47px;
+  text-align: right;
+}
+.stocks-banner .advantages-card-text {
+  padding-left: 10px;
+}
+.stocks-banner .advantages-card span {
+  font-size: 18px;
+  line-height: 21px;
+  color: #6C6C6A;
+}
+.stocks-banner .advantages-card:first-child {
+  flex-basis: 390px;
+  padding-left: 70px;
+}
+.stocks-banner .advantages-card:not(:first-child) {
+  flex-basis: 300px;
+  padding-left: 100px;
+}
+
 /*# sourceMappingURL=style.css.map */

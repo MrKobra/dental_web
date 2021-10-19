@@ -98,3 +98,53 @@
             right: 5px
             top: 50%
             margin-top: -4px
+
+/* Stock Banner */
+
+.stocks-banner
+  &-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-text
+    padding-left: 120px
+    box-sizing: border-box
+    flex-basis: 580px
+    span
+      font-size: 18px
+      line-height: 21px
+      color: #6C6C6A
+      display: block
+    h2
+      font-size: 50px
+      color: #172B52
+      font-family: $hFont, $mFont, sans-serif
+      margin: 10px 0
+    .btnLight
+      margin-top: 50px
+  &-img
+    flex-basis: 680px
+  .advantages
+    padding: 35px 0
+    &-container
+      display: flex
+    &-card
+      box-sizing: border-box
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &-img
+        flex-basis: 47px
+        text-align: right
+      &-text
+        padding-left: 10px
+      span
+        font-size: 18px
+        line-height: 21px
+        color: #6C6C6A
+      &:first-child
+        flex-basis: 390px
+        padding-left: 70px
+      &:not(:first-child)
+        flex-basis: 300px
+        padding-left: 100px
