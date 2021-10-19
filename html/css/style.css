@@ -143,4 +143,37 @@ body {
   background: url(../img/map.png) no-repeat center center;
 }
 
+/* Top Nav */
+.top-nav {
+  padding: 23px 0 28px;
+}
+.top-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.top-nav ul li {
+  list-style: none;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 25px;
+}
+.top-nav ul li.menu-item-has-child a {
+  color: #EA3938;
+  position: relative;
+  display: inline-block;
+  padding-right: 25px;
+}
+.top-nav ul li.menu-item-has-child a:after {
+  content: "";
+  width: 14px;
+  height: 8px;
+  background: url(../img/menu-arrow-down.png) no-repeat center center;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -4px;
+}
+
 /*# sourceMappingURL=style.css.map */
