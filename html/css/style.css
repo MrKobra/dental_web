@@ -15,4 +15,15 @@ input:focus, textarea:focus {
   outline: none;
 }
 
+body {
+  font-family: "Raleway", "Gotham Pro", sans-serif;
+}
+
+.container {
+  width: 1320px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=style.css.map */
