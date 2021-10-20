@@ -653,7 +653,7 @@ body {
 
 /* Reviews */
 .reviews {
-  padding: 100px 0;
+  padding: 100px 0 240px;
 }
 .reviews .heading span {
   width: 50%;
@@ -722,6 +722,20 @@ body {
 .reviews-card-author span {
   font-size: 14px;
   line-height: 21px;
+}
+
+/* Contact Form */
+.contact-form .form-block-container {
+  position: relative;
+}
+.contact-form .form-block-container:after {
+  content: "";
+  width: 643px;
+  height: 617px;
+  background: url(../img/contact-form.png) no-repeat center center;
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */
