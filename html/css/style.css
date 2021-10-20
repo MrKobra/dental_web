@@ -491,37 +491,36 @@ body {
   height: 450px;
 }
 
-/* Stocks Form */
-.stocks-form {
+/* Form Block */
+.form-block {
   background: linear-gradient(84.27deg, #E6F2FF 0%, #FAF1ED 100%);
 }
-.stocks-form-container {
-  background: url(../img/stocks-form.png) no-repeat right bottom;
+.form-block-container {
   padding: 80px;
 }
-.stocks-form form {
+.form-block form {
   width: 580px;
 }
-.stocks-form form h2 {
+.form-block form h2 {
   font-family: "Gotham Pro", "Raleway", sans-serif;
   font-size: 40px;
   line-height: 48px;
   margin: 0;
 }
-.stocks-form form h2 span {
+.form-block form h2 span {
   color: #EA3938;
   font-size: 40px;
 }
-.stocks-form form p {
+.form-block form p {
   font-size: 20px;
   line-height: 28px;
   margin: 20px 0 0;
   color: #172B52;
 }
-.stocks-form form p a {
+.form-block form p a {
   color: #38BCEA;
 }
-.stocks-form form input:not([type=submit]) {
+.form-block form input:not([type=submit]) {
   width: 255px;
   height: 71px;
   border-radius: 5px;
@@ -531,13 +530,13 @@ body {
   color: #BBBBBB;
   border: none;
 }
-.stocks-form form input:not([type=submit])::-moz-placeholder {
+.form-block form input:not([type=submit])::-moz-placeholder {
   opacity: 1;
 }
-.stocks-form form input:not([type=submit])::-webkit-input-placeholder {
+.form-block form input:not([type=submit])::-webkit-input-placeholder {
   opacity: 1;
 }
-.stocks-form form input[type=submit] {
+.form-block form input[type=submit] {
   width: 295px;
   text-align: center;
   border: none;
@@ -545,18 +544,23 @@ body {
   transition: all 0.2s linear;
   margin-left: 20px;
 }
-.stocks-form form input[type=submit]:hover {
+.form-block form input[type=submit]:hover {
   cursor: pointer;
 }
-.stocks-form form span {
+.form-block form span {
   font-size: 15px;
   line-height: 21px;
   color: #6C6C6A;
   display: inline-block;
   margin-top: 10px;
 }
-.stocks-form form span a {
+.form-block form span a {
   border-bottom: 1px solid #6C6C6A;
+}
+
+/* Stocks Form */
+.stocks-form .form-block-container {
+  background: url(../img/stocks-form.png) no-repeat right bottom;
 }
 
 /* Our Team */
