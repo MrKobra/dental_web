@@ -139,3 +139,35 @@ body
     &:hover
       &:after
         background: $active url(../img/slider-disabled-arrow.png) no-repeat center center
+
+.breadcrumbs
+  padding-bottom: 30px
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    li
+      list-style: none
+      color: #999999
+      font-size: 14px
+      line-height: 17px
+      padding: 0 10px
+      &:first-child
+        padding-left: 15px
+        position: relative
+        img
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+      a
+        position: relative
+        color: $normal
+        &:after
+          content: '/'
+          color: $normal
+          font-size: 14px
+          line-height: 17px
+          position: absolute
+          right: -14px
+          top: 1px
