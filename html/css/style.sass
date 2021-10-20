@@ -889,3 +889,124 @@
           left: 8px
           top: 10px
           position: absolute
+
+/* Contact Page */
+.contact-page
+  .contact-form
+    padding-bottom: 0
+  &-content
+    padding-bottom: 240px
+  &-info
+    margin-top: 50px
+    h3
+      font-size: 25px
+      line-height: 30px
+      font-family: $hFont, $hFont, sans-serif
+      color: #38BCEA
+      width: 455px
+      margin: 0
+      span
+        color: #EA3938
+    p
+      font-size: 18px
+      line-height: 26px
+      color: #6C6C6A
+      margin: 10px 0 0
+      width: 70%
+  &-container
+    display: flex
+    align-items: center
+    margin-top: 50px
+  &-data
+    flex-basis: calc(100% - 850px)
+    padding-right: 50px
+    box-sizing: border-box
+    .address
+      p
+        font-weight: 500
+        font-size: 24px
+        line-height: 29px
+        margin: 0
+    .phone, .mail
+      ul
+        margin: 0
+        padding: 0
+        li
+          list-style: none
+          font-size: 20px
+          line-height: 24px
+          color: #EA3938
+          position: relative
+          padding-left: 32px
+          margin-top: 10px
+          &:before
+            content: ''
+            width: 24px
+            height: 24px
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+          a
+            color: #EA3938
+            &:hover
+              color: $normal
+    .phone
+      padding-top: 10px
+      ul
+        li 
+          &:before
+            background: url(../img/phone-active.png) no-repeat center center
+            margin-top: 4px
+    .mail
+      ul
+        li
+          &:before
+            background: url(../img/mail-active.png) no-repeat center center
+            margin-top: 2px
+    .work-time
+      margin-top: 40px
+      span
+        color: #999999
+        font-size: 20px
+        line-height: 24px
+        font-weight: 500
+      ul
+        margin: 0
+        padding: 0
+        position: relative
+        &:before
+          content: ''
+          height: calc(100% + 26px)
+          border-left: 1px solid #FFCACB
+          position: absolute
+          left: 6px
+          top: -13px
+          z-index: 1
+        li
+          list-style: none
+          font-size: 20px
+          line-height: 24px
+          font-weight: 500
+          padding-left: 30px
+          margin-top: 25px
+          position: relative
+          &:before
+            content: ''
+            width: 11px
+            height: 11px
+            border: 1px solid #EA3938
+            box-sizing: border-box
+            border-radius: 50%
+            position: absolute
+            left: 1px
+            top: 8px
+            z-index: 2
+            background: #ffffff
+          &:last-child
+            &:before
+              border-color: #FFCACB
+  &-map
+    flex-basis: 850px
+    &-container
+      width: 850px
