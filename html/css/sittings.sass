@@ -109,6 +109,7 @@ body
     background: $hover url(../img/slider-active-arrow.png) no-repeat center center
     border-radius: 50%
     position: absolute
+    transition: all .2s ease-in-out
     left: 0
     top: 0
   &.slick-disabled
@@ -116,13 +117,25 @@ body
       background: $hover url(../img/slider-disabled-arrow.png) no-repeat center center
 .slick-prev
   left: -10px
+  &:hover
+    &:after
+      background: $active url(../img/slider-active-arrow.png) no-repeat center center
   &.slick-disabled
     &:after
       transform: rotate(0)
+    &:hover
+      &:after
+        background: $active url(../img/slider-disabled-arrow.png) no-repeat center center
   &:after
     transform: rotate(180deg)
 .slick-next
   right: -10px
+  &:hover
+    &:after
+      background: $active url(../img/slider-active-arrow.png) no-repeat center center
   &.slick-disabled
     &:after
       transform: rotate(180deg)
+    &:hover
+      &:after
+        background: $active url(../img/slider-disabled-arrow.png) no-repeat center center

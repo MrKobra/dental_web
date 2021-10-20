@@ -83,12 +83,18 @@
       font-size: 16px
       line-height: 19px
       margin: 0 25px
+      a
+        &:hover
+          color: $normal
       &.menu-item-has-child
         a
           color: #EA3938
           position: relative
           display: inline-block
           padding-right: 25px
+          &:hover
+            &:after
+              transform: rotate(180deg)
           &:after
             content: ''
             width: 14px
@@ -98,6 +104,7 @@
             right: 5px
             top: 50%
             margin-top: -4px
+            transition: all .2s ease-in-out
 
 /* Stock Banner */
 
@@ -149,13 +156,14 @@
         flex-basis: 300px
         padding-left: 100px
 
+/* Service */
+
 .service
   padding: 115px 0 50px
   &-container
     display: flex
     flex-wrap: wrap
     margin: 20px -15px 0
-    align-items: center
   &-card
     margin: 30px 15px 0
     border-radius: 20px
@@ -183,10 +191,14 @@
     a
       font-size: 18px
       line-height: 21px
+      padding-bottom: 2px
       color: $normal
       position: relative
       display: inline-block
       padding-right: 28px
+      border-bottom: 1px solid transparent
+      &:hover
+        border-color: $normal
       &:after
         content: ''
         width: 18px
@@ -203,6 +215,9 @@
   &-slogan
     flex-basis: calc(50% - 30px)
     margin: 30px 15px 0
+    display: flex
+    flex-direction: column
+    justify-content: center
     h3
       font-size: 24px
       line-height: 29px
@@ -300,6 +315,10 @@
       color: #172B52
       a
         color: $normal
+        padding-bottom: 2px
+        border-bottom: 1px solid transparent
+        &:hover
+          border-color: $normal
     input
       &:not([type=submit])
         width: 255px
@@ -331,6 +350,9 @@
       margin-top: 10px
       a
         border-bottom: 1px solid #6C6C6A
+        &:hover
+          color: $normal
+          border-color: $normal
 
 /* Stocks Form */
 
@@ -519,6 +541,9 @@
         display: flex
         align-items: center
         justify-content: center
+        border: 1px solid $hover
+        &:hover
+          border-color: $active
   &-heading
     span
       font-size: 20px
@@ -535,6 +560,8 @@
         list-style: none
         a
           color: #6C6C6A
+          &:hover
+            color: $normal
   &-contact
     ul
       margin: 0
@@ -545,6 +572,9 @@
         font-size: 14px
         padding-left: 36px
         position: relative
+        a
+          &:hover
+            color: $normal
         &:first-child:before
           content: ''
           width: 24px
@@ -597,3 +627,5 @@
           padding-left: 10px
         a
           color: #6C6C6A
+          &:hover
+            color: $normal
