@@ -175,6 +175,45 @@ body {
   background: #172B52 url(../img/slider-disabled-arrow.png) no-repeat center center;
 }
 
+.breadcrumbs {
+  padding-bottom: 30px;
+}
+.breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.breadcrumbs ul li {
+  list-style: none;
+  color: #999999;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 10px;
+}
+.breadcrumbs ul li:first-child {
+  padding-left: 15px;
+  position: relative;
+}
+.breadcrumbs ul li:first-child img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.breadcrumbs ul li a {
+  position: relative;
+  color: #38BCEA;
+}
+.breadcrumbs ul li a:after {
+  content: "/";
+  color: #38BCEA;
+  font-size: 14px;
+  line-height: 17px;
+  position: absolute;
+  right: -14px;
+  top: 1px;
+}
+
 /* Header Styles */
 .top-header-siteName {
   background: #38BCEA;
@@ -1152,6 +1191,60 @@ body {
 .dropdown-row {
   border-bottom: 1px solid #EEEEEE;
   padding-bottom: 15px;
+}
+
+/* Price Page */
+.price-page .reviews {
+  padding-bottom: 150px;
+}
+.price-page .dropdown-container {
+  padding-top: 20px;
+}
+.price-page .dropdown-container .heading {
+  margin-bottom: 50px;
+}
+.price-page .dropdown-container .heading span {
+  width: 60%;
+}
+.price-page-content {
+  padding-top: 50px;
+}
+.price-page-content h2 {
+  margin: 100px 0 0;
+  font-family: "Gotham Pro", "Raleway", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  width: 70%;
+}
+.price-page-content p {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 5px 0 0;
+  color: #6C6C6A;
+  width: 60%;
+}
+.price-page-content ul {
+  margin: 0;
+  padding: 0;
+}
+.price-page-content ul li {
+  list-style: none;
+  color: #6C6C6A;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 20px;
+  padding-left: 21px;
+  position: relative;
+}
+.price-page-content ul li:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #6C6C6A;
+  border-radius: 50%;
+  left: 8px;
+  top: 10px;
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */
