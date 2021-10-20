@@ -738,4 +738,126 @@ body {
   position: absolute;
 }
 
+/* Main Footer */
+.main-footer {
+  padding-top: 150px;
+}
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-footer-info {
+  flex-basis: 265px;
+}
+.main-footer-info p {
+  font-size: 14px;
+  line-height: 19px;
+  color: #172B52;
+  margin: 25px 0 0;
+}
+.main-footer-social {
+  display: flex;
+  margin: 25px 0 0;
+  padding: 0;
+}
+.main-footer-social li {
+  list-style: none;
+}
+.main-footer-social li:not(:last-child) {
+  margin-right: 15px;
+}
+.main-footer-social li a {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #C3EBF9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-footer-heading span {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  display: block;
+}
+.main-footer-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.main-footer-menu ul li {
+  font-size: 16px;
+  margin: 20px 0 0;
+  list-style: none;
+}
+.main-footer-menu ul li a {
+  color: #6C6C6A;
+}
+.main-footer-contact ul {
+  margin: 0;
+  padding: 0;
+}
+.main-footer-contact ul li {
+  list-style: none;
+  margin: 30px 0 0;
+  font-size: 14px;
+  padding-left: 36px;
+  position: relative;
+}
+.main-footer-contact ul li:first-child:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -12px;
+}
+.main-footer-mail ul li:first-child:before {
+  background: url(../img/mail.png) no-repeat center center;
+}
+.main-footer-phone ul li:first-child:before {
+  background: url(../img/phone.png) no-repeat center center;
+}
+.main-footer-map ul li:first-child:before {
+  background: url(../img/map.png) no-repeat center center;
+}
+.main-footer-bottom {
+  padding: 50px 0 30px;
+}
+.main-footer-bottom p {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  color: #6C6C6A;
+}
+.main-footer-bottom ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.main-footer-bottom ul li {
+  list-style: none;
+}
+.main-footer-bottom ul li:not(:last-child) {
+  padding: 0 10px;
+  position: relative;
+}
+.main-footer-bottom ul li:not(:last-child):after {
+  content: "|";
+  color: #6C6C6A;
+  font-size: 14px;
+  line-height: 17px;
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-footer-bottom ul li:last-child {
+  padding-left: 10px;
+}
+.main-footer-bottom ul li a {
+  color: #6C6C6A;
+}
+
 /*# sourceMappingURL=style.css.map */
