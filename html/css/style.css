@@ -138,7 +138,7 @@ body {
   background: #C3EBF9 url(../img/slider-active-arrow.png) no-repeat center center;
   border-radius: 50%;
   position: absolute;
-  transition: all 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
   left: 0;
   top: 0;
 }
@@ -214,39 +214,6 @@ body {
   top: 1px;
 }
 
-@media (min-width: 1200px) and (max-width: 1360px) {
-  .container {
-    width: 1140px;
-  }
-
-  /* Top Header */
-  .top-header-contact-block:not(:last-child) {
-    padding: 0 26px;
-  }
-  .top-header .logo img {
-    width: 200px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  .container {
-    width: 960px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .container {
-    width: 720px;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .container {
-    width: 540px;
-  }
-}
-@media (max-width: 576px) {
-  .container {
-    width: 100%;
-  }
-}
 /* Header Styles */
 .top-header-siteName {
   background: #38BCEA;
@@ -394,6 +361,9 @@ body {
 }
 .stocks-banner-img {
   flex-basis: 680px;
+}
+.stocks-banner-img img {
+  max-width: 100%;
 }
 .stocks-banner .advantages {
   padding: 35px 0;
@@ -590,6 +560,7 @@ body {
 .about-us-slide-img {
   width: 100%;
   height: 450px;
+  background-size: cover !important;
 }
 
 /* Form Block */
@@ -788,6 +759,7 @@ body {
   z-index: 2;
   min-height: 232px;
   background: #ffffff;
+  box-sizing: border-box;
 }
 .reviews-card-text:before {
   content: "";
@@ -1312,6 +1284,7 @@ body {
   display: flex;
   align-items: center;
   margin-top: 50px;
+  justify-content: space-between;
 }
 .contact-page-data {
   flex-basis: calc(100% - 850px);
@@ -1411,9 +1384,6 @@ body {
 .contact-page-data .work-time ul li:last-child:before {
   border-color: #FFCACB;
 }
-.contact-page-map {
-  flex-basis: 850px;
-}
 .contact-page-map-container {
   width: 850px;
 }
@@ -1436,6 +1406,292 @@ body {
 }
 .single-page-content.nothing-page {
   padding: 100px 0 200px;
+}
+
+@media (min-width: 1200px) and (max-width: 1360px) {
+  .container {
+    width: 1140px;
+  }
+
+  /* Top Header */
+  .top-header-contact-block:not(:last-child) {
+    padding: 0 26px;
+  }
+  .top-header .logo img {
+    width: 200px;
+  }
+
+  /* About Us */
+  .about-us-slide-img {
+    height: 315px;
+  }
+
+  /* Stocks Form */
+  .stocks-form form {
+    position: relative;
+    z-index: 2;
+  }
+  .stocks-form .form-block-container {
+    position: relative;
+  }
+  .stocks-form .form-block-container:after {
+    content: "";
+    width: 490px;
+    height: 405px;
+    position: absolute;
+    background: url(../img/stocks-form.png);
+    background-size: cover;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 10px;
+    z-index: 1;
+  }
+
+  /* Our Team */
+  .our-team-card {
+    flex-basis: calc(33.33% - 12px);
+  }
+  .our-team-container {
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+
+  /* Contact Form */
+  .contact-form .form-block-container:after {
+    background-size: cover;
+    width: 460px;
+    height: 445px;
+    right: -25px;
+  }
+
+  /* Contact Page */
+  .contact-page-map-container {
+    width: 650px;
+  }
+  .contact-page-data {
+    flex-basis: calc(100% - 650px);
+  }
+
+  /* Services Page */
+  .services-main-screen {
+    background-size: 650px;
+  }
+}
+@media (max-width: 1360px) {
+  /* Stocks Banner */
+  .stocks-banner-text {
+    padding-left: 0;
+  }
+  .stocks-banner .advantages-card:not(:first-child) {
+    padding-left: 50px;
+  }
+  .stocks-banner .advantages-card:first-child {
+    padding-left: 0;
+  }
+
+  /* Stocks Form */
+  .stocks-form .form-block-container {
+    background: transparent;
+  }
+
+  /* Services Page */
+  .services-main-screen-text {
+    padding-left: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1360px) {
+  /* Services */
+  .service-card:not(.last-card) {
+    flex-basis: calc(50% - 30px);
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+
+  /* Stock Banner */
+  .stocks-banner .advantages-card {
+    flex-basis: 25% !important;
+    padding-left: 25px;
+  }
+  .stocks-banner .advantages-card span {
+    font-size: 16px;
+  }
+
+  /* Service */
+  .service {
+    padding: 75px 0 50px;
+  }
+
+  /* About Us */
+  .about-us {
+    padding: 50px 0 100px;
+  }
+
+  /* Form Block */
+  .form-block-container {
+    padding: 80px 30px;
+  }
+
+  /* Out Team */
+  .our-team {
+    padding: 80px 0 50px;
+  }
+  .our-team .heading {
+    padding-left: 30px;
+  }
+  .our-team-card {
+    flex-basis: calc(50% - 45px);
+  }
+
+  /* Reviews */
+  .reviews {
+    padding: 40px 0 100px;
+  }
+
+  /* Main Footer */
+  .main-footer {
+    padding-top: 80px;
+  }
+
+  /* Contact Page */
+  .contact-page-content {
+    padding-bottom: 100px;
+  }
+  .contact-page-map-container {
+    width: 600px;
+  }
+  .contact-page-data {
+    flex-basis: calc(100% - 600px);
+    padding-right: 40px;
+  }
+
+  /* Single Page */
+  .single-page-content {
+    padding: 50px 0 100px;
+  }
+
+  /* Price Page */
+  .price-page-content h2 {
+    margin: 50px 0 0;
+  }
+  .price-page .reviews {
+    padding: 100px 0;
+  }
+
+  /* Services Page */
+  .services-page-content {
+    padding: 75px 0 50px;
+  }
+  .services-page .dropdown-container {
+    padding: 40px 0 100px;
+  }
+  .services-page .reviews {
+    padding: 80px 0 40px;
+  }
+}
+@media (max-width: 1200px) {
+  /* Top Header */
+  .top-header-container {
+    flex-direction: column;
+  }
+  .top-header-contact {
+    margin-top: 15px;
+  }
+
+  /* About Us */
+  .about-us .heading span {
+    width: 100%;
+  }
+  .about-us-container {
+    flex-direction: column;
+  }
+  .about-us-slider {
+    width: 730px;
+    margin-top: 50px;
+  }
+  .about-us-text {
+    flex-basis: auto;
+  }
+
+  /* Form Block */
+  .form-block form {
+    width: 100%;
+  }
+
+  /* Reviews */
+  .reviews .heading span {
+    width: 100%;
+  }
+
+  /* Contact Form */
+  .contact-form .form-block-container:after {
+    display: none;
+  }
+
+  /* Contact Page */
+  .contact-page-info h3 {
+    width: 100%;
+  }
+  .contact-page-info p {
+    width: 100%;
+  }
+
+  /* Price Page */
+  .price-page .dropdown-container .heading span {
+    width: 100%;
+  }
+  .price-page-content h2, .price-page-content p {
+    width: 100%;
+  }
+
+  /* Dropdown Block */
+  .dropdown-block {
+    padding-left: 0;
+  }
+
+  /* Services Page */
+  .services-main-screen {
+    background: transparent;
+  }
+  .services-main-screen-text {
+    width: 100%;
+  }
+  .services-page-content .heading span {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 1200px) {
+  /* Reviews */
+  .reviews-card {
+    flex-basis: 50%;
+  }
+  .reviews-card:last-child {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  /* Our Team */
+  .our-team-container {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

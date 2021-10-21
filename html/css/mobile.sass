@@ -1,0 +1,267 @@
+@media (min-width: 1200px) and (max-width: 1360px)
+  .container
+    width: 1140px
+
+  /* Top Header */
+  .top-header
+    &-contact-block
+      &:not(:last-child)
+        padding: 0 26px
+    .logo
+      img
+        width: 200px
+
+  /* About Us */
+  .about-us
+    &-slide-img
+      height: 315px
+
+  /* Stocks Form */
+  .stocks-form
+    form
+      position: relative
+      z-index: 2
+    .form-block-container
+      position: relative
+      &:after
+        content: ''
+        width: 490px
+        height: 405px
+        position: absolute
+        background: url(../img/stocks-form.png)
+        background-size: cover
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        margin-top: 10px
+        z-index: 1
+
+  /* Our Team */
+  .our-team
+    &-card
+      flex-basis: calc(33.33% - 12px)
+    &-container
+      column-gap: 15px
+      row-gap: 15px
+
+  /* Contact Form */
+  .contact-form
+    .form-block
+      &-container
+        &:after
+          background-size: cover
+          width: 460px
+          height: 445px
+          right: -25px
+
+  /* Contact Page */
+  .contact-page
+    &-map-container
+      width: 650px
+    &-data
+      flex-basis: calc(100% - 650px)
+
+  /* Services Page */
+  .services
+    &-main-screen
+      background-size: 650px
+
+@media (max-width: 1360px)
+
+  /* Stocks Banner */
+  .stocks-banner
+    &-text
+      padding-left: 0
+    .advantages-card
+      &:not(:first-child)
+        padding-left: 50px
+      &:first-child
+        padding-left: 0
+
+  /* Stocks Form */
+  .stocks-form
+    .form-block-container
+      background: transparent
+
+  /* Services Page */
+  .services
+    &-main-screen
+      &-text
+        padding-left: 0
+
+@media (min-width: 992px) and (max-width: 1360px)
+
+  /* Services */
+  .service-card
+    &:not(.last-card)
+      flex-basis: calc(50% - 30px)
+
+@media (min-width: 992px) and (max-width: 1200px)
+  .container
+    width: 960px
+
+  /* Stock Banner */
+  .stocks-banner
+    .advantages-card
+      flex-basis: 25% !important
+      padding-left: 25px
+      span
+        font-size: 16px
+
+  /* Service */
+  .service
+    padding: 75px 0 50px
+
+  /* About Us */
+  .about-us
+    padding: 50px 0 100px
+
+  /* Form Block */
+  .form-block
+    &-container
+      padding: 80px 30px
+
+  /* Out Team */
+  .our-team
+    padding: 80px 0 50px
+    .heading
+      padding-left: 30px
+    &-card
+      flex-basis: calc(50% - 45px)
+
+  /* Reviews */
+  .reviews
+    padding: 40px 0 100px
+
+  /* Main Footer */
+  .main-footer
+    padding-top: 80px
+
+  /* Contact Page */
+  .contact-page
+    &-content
+      padding-bottom: 100px
+    &-map
+      &-container
+        width: 600px
+    &-data
+      flex-basis: calc(100% - 600px)
+      padding-right: 40px
+
+  /* Single Page */
+  .single-page-content
+    padding: 50px 0 100px
+
+  /* Price Page */
+  .price-page
+    &-content
+      h2
+        margin: 50px 0 0
+    .reviews
+      padding: 100px 0
+
+  /* Services Page */
+  .services-page
+    &-content
+      padding: 75px 0 50px
+    .dropdown-container
+      padding: 40px 0 100px
+    .reviews
+      padding: 80px 0 40px
+
+@media (max-width: 1200px)
+  /* Top Header */
+  .top-header
+    &-container
+      flex-direction: column
+    &-contact
+      margin-top: 15px
+
+  /* About Us */
+  .about-us
+    .heading
+      span
+        width: 100%
+    &-container
+      flex-direction: column
+    &-slider
+      width: 730px
+      margin-top: 50px
+    &-text
+      flex-basis: auto
+
+  /* Form Block */
+  .form-block
+    form
+      width: 100%
+
+  /* Reviews */
+  .reviews
+    .heading
+      span
+        width: 100%
+
+  /* Contact Form */
+  .contact-form
+    .form-block-container
+      &:after
+        display: none
+
+  /* Contact Page */
+  .contact-page
+    &-info
+      h3
+        width: 100%
+      p
+        width: 100%
+
+  /* Price Page */
+  .price-page
+    .dropdown-container
+      .heading
+        span
+          width: 100%
+    &-content
+      h2, p
+        width: 100%
+
+  /* Dropdown Block */
+  .dropdown-block
+    padding-left: 0
+
+  /* Services Page */
+  .services
+    &-main-screen
+      background: transparent
+      &-text
+        width: 100%
+    &-page-content
+      .heading
+        span
+          width: 100%
+
+@media (min-width: 576px) and (max-width: 1200px)
+  /* Reviews */
+  .reviews
+    &-card
+      flex-basis: 50%
+      &:last-child
+        display: none
+
+@media (min-width: 768px) and (max-width: 1200px)
+  /* Our Team */
+  .our-team
+    &-container
+      justify-content: center
+
+@media (min-width: 768px) and (max-width: 992px)
+  .container
+    width: 720px
+
+@media (min-width: 576px) and (max-width: 768px)
+  .container
+    width: 540px
+
+@media (max-width: 576px)
+  .container
+    width: 100%
