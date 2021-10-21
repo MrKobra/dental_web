@@ -1385,4 +1385,14 @@ body {
   width: 850px;
 }
 
+/* Single Page */
+.single-page-content {
+  padding: 50px 0 200px;
+}
+.single-page-content p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 30px 0 0;
+}
+
 /*# sourceMappingURL=style.css.map */
