@@ -215,6 +215,9 @@ body {
 }
 
 /* Header Styles */
+.top-header .mobile-btn {
+  display: none;
+}
 .top-header-siteName {
   background: #38BCEA;
   text-align: center;
@@ -620,6 +623,7 @@ body {
   padding: 24px 0;
   transition: all 0.2s linear;
   margin-left: 20px;
+  margin-top: 10px;
 }
 .form-block form input[type=submit]:hover {
   cursor: pointer;
@@ -1550,6 +1554,12 @@ body {
   .reviews {
     padding: 40px 0 100px;
   }
+  .reviews-card {
+    flex-basis: 50%;
+  }
+  .reviews-card:last-child {
+    display: none;
+  }
 
   /* Main Footer */
   .main-footer {
@@ -1662,14 +1672,10 @@ body {
   .services-page-content .heading span {
     width: 100%;
   }
-}
-@media (min-width: 576px) and (max-width: 1200px) {
-  /* Reviews */
-  .reviews-card {
-    flex-basis: 50%;
-  }
-  .reviews-card:last-child {
-    display: none;
+
+  /* Our Team */
+  .our-team .heading span {
+    width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -1681,6 +1687,318 @@ body {
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
     width: 720px;
+    /* Stocks Banner */
+  }
+
+  .stocks-banner-text h2 {
+    font-size: 42px;
+  }
+  .stocks-banner-text span {
+    font-size: 16px;
+  }
+
+  /* Services */
+  .service {
+    padding: 80px 0 50px;
+  }
+
+  /* About Us */
+  .about-us {
+    padding: 30px 0 80px;
+  }
+
+  /* Our Team */
+  .our-team {
+    padding: 80px 0 50px;
+  }
+  .our-team-card {
+    flex-basis: calc(50% - 17px);
+  }
+
+  /* Reviews */
+  .reviews {
+    padding: 50px 0 80px;
+  }
+
+  .main-footer {
+    padding-top: 80px;
+  }
+  .main-footer-info {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .main-footer-social {
+    justify-content: center;
+  }
+  .main-footer-menu, .main-footer-contact {
+    flex-basis: 50%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .main-footer-contact ul li {
+    display: inline-block;
+  }
+
+  .contact-page-content {
+    padding-bottom: 80px;
+  }
+
+  .single-page-content {
+    padding-bottom: 80px;
+  }
+  .single-page-content.nothing-page {
+    padding: 100px 0;
+  }
+
+  .price-page-content {
+    padding-top: 30px;
+  }
+  .price-page-content h2 {
+    margin-top: 50px;
+  }
+  .price-page .reviews {
+    padding: 80px 0;
+  }
+
+  .services-page-content {
+    padding: 80px 0 50px;
+  }
+  .services-page .dropdown-container {
+    padding: 30px 0 80px;
+  }
+  .services-page .reviews {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 992px) {
+  /* Top Header */
+  .top-header {
+    box-sizing: border-box;
+  }
+  .top-header-siteName.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    border-bottom: 1px solid #172B52;
+  }
+  .top-header-siteName .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-header .mobile-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    position: relative;
+  }
+  .top-header .mobile-btn:hover {
+    cursor: pointer;
+  }
+  .top-header .mobile-btn.active span {
+    margin-top: -1px;
+  }
+  .top-header .mobile-btn.active span:nth-child(2) {
+    display: none;
+  }
+  .top-header .mobile-btn.active span:first-child {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  .top-header .mobile-btn.active span:last-child {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .top-header .mobile-btn span {
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    left: 5px;
+    transition: all 0.2s linear;
+  }
+  .top-header .mobile-btn span:first-child {
+    top: 6px;
+  }
+  .top-header .mobile-btn span:nth-child(2) {
+    top: 14px;
+  }
+  .top-header .mobile-btn span:last-child {
+    top: 22px;
+  }
+  .top-header-contact {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .top-header-contact-block {
+    margin-top: 15px;
+  }
+  .top-header-contact-block p {
+    font-size: 14px;
+  }
+  .top-header-contact-block ul li {
+    font-size: 16px;
+  }
+
+  /* Top Nav */
+  .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #38BCEA;
+    padding: 0;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+    transform: translateX(-100%);
+  }
+  .top-nav.active {
+    transform: translateX(0);
+  }
+  .top-nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 0 0 50px;
+    box-sizing: border-box;
+  }
+  .top-nav ul li {
+    padding: 15px 0;
+  }
+  .top-nav ul li:first-child {
+    padding-top: 65px;
+  }
+  .top-nav ul li a {
+    color: #ffffff;
+  }
+  .top-nav ul li a:hover {
+    color: #172B52;
+  }
+  .top-nav ul li.menu-item-has-child a {
+    padding: 0;
+  }
+  .top-nav ul li.menu-item-has-child a:after {
+    right: -20px;
+  }
+
+  /* Stocks Banner */
+  .stocks-banner .advantages {
+    display: none;
+  }
+
+  /* Service */
+  .service-card {
+    flex-basis: 100% !important;
+  }
+  .service-slogan {
+    flex-basis: 100%;
+  }
+
+  /* Stocks Form */
+  .stocks-form .form-block-container {
+    padding: 80px 0;
+  }
+
+  /* Reviews */
+  .reviews-container {
+    flex-wrap: wrap;
+  }
+  .reviews-card {
+    flex-basis: 100%;
+  }
+
+  /* Contact Form */
+  .contact-form .form-block-container {
+    padding: 80px 0;
+  }
+
+  .main-footer-top .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-footer-bottom .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .main-footer .copy {
+    margin-top: 15px;
+  }
+
+  .breadcrumbs {
+    padding-top: 30px;
+  }
+
+  .contact-page-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-page-data {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+  .contact-page-map {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .contact-page-map-container {
+    width: 100%;
+  }
+
+  .single-page-content {
+    padding-top: 0;
+  }
+
+  .dropdown-body ul {
+    overflow: visible;
+  }
+  .dropdown-body ul li {
+    flex-direction: column;
+  }
+  .dropdown-body ul li:not(:last-child) {
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 15px;
+  }
+  .dropdown-body ul li span {
+    width: calc(100% - 80px);
+  }
+  .dropdown-body ul li span:after {
+    display: none;
+  }
+  .dropdown-body ul li strong {
+    margin-top: 5px;
+  }
+  .dropdown-body ul li.stocks span:before {
+    z-index: 3;
+    top: -2px;
+    bottom: auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .btnLight, .btnDark {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  /* Stocks Banner */
+  .stocks-banner {
+    padding-top: 30px;
+  }
+
+  /* Form Block */
+  .form-block form input:not([type=submit]) {
+    height: 50px;
+    font-size: 18px;
+  }
+  .form-block form input[type=submit] {
+    font-size: 18px;
+    height: 50px;
+    padding: 0;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
