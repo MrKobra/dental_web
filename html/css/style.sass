@@ -297,6 +297,9 @@
     width: 100%
     height: 450px
     background-size: cover!important
+    img
+      display: none
+      max-width: 100%
 
 /* Form Block */
 .form-block
@@ -440,6 +443,7 @@
         width: 100%
         text-align: center
   &-img
+    text-align: center
     img
       max-width: 100%
 
@@ -618,8 +622,10 @@
       display: flex
       li
         list-style: none
-        &:not(:last-child)
+        font-size: 14px
+        &:not(:last-child):not(:first-child)
           padding: 0 10px
+        &:not(:last-child)
           position: relative
           &:after
             content: '|'
@@ -632,6 +638,8 @@
             transform: translateY(-50%)
         &:last-child
           padding-left: 10px
+        &:first-child
+          padding-right: 10px
         a
           color: #6C6C6A
           &:hover
@@ -754,7 +762,7 @@
     background: $hover
     display: block
     position: relative
-    padding: 20px 0 20px 35px
+    padding: 20px 50px 20px 35px
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15)
     border-radius: 3px
     h3

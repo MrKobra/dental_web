@@ -565,6 +565,10 @@ body {
   height: 450px;
   background-size: cover !important;
 }
+.about-us-slide-img img {
+  display: none;
+  max-width: 100%;
+}
 
 /* Form Block */
 .form-block {
@@ -730,6 +734,9 @@ body {
 }
 .our-team-card .request a {
   width: 100%;
+  text-align: center;
+}
+.our-team-img {
   text-align: center;
 }
 .our-team-img img {
@@ -934,9 +941,12 @@ body {
 }
 .main-footer-bottom ul li {
   list-style: none;
+  font-size: 14px;
+}
+.main-footer-bottom ul li:not(:last-child):not(:first-child) {
+  padding: 0 10px;
 }
 .main-footer-bottom ul li:not(:last-child) {
-  padding: 0 10px;
   position: relative;
 }
 .main-footer-bottom ul li:not(:last-child):after {
@@ -951,6 +961,9 @@ body {
 }
 .main-footer-bottom ul li:last-child {
   padding-left: 10px;
+}
+.main-footer-bottom ul li:first-child {
+  padding-right: 10px;
 }
 .main-footer-bottom ul li a {
   color: #6C6C6A;
@@ -1092,7 +1105,7 @@ body {
   background: #C3EBF9;
   display: block;
   position: relative;
-  padding: 20px 0 20px 35px;
+  padding: 20px 50px 20px 35px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
 }
@@ -1720,25 +1733,6 @@ body {
     padding: 50px 0 80px;
   }
 
-  .main-footer {
-    padding-top: 80px;
-  }
-  .main-footer-info {
-    flex-basis: 100%;
-    text-align: center;
-  }
-  .main-footer-social {
-    justify-content: center;
-  }
-  .main-footer-menu, .main-footer-contact {
-    flex-basis: 50%;
-    text-align: center;
-    margin-top: 30px;
-  }
-  .main-footer-contact ul li {
-    display: inline-block;
-  }
-
   .contact-page-content {
     padding-bottom: 80px;
   }
@@ -1770,10 +1764,33 @@ body {
     padding-top: 80px;
   }
 }
+@media (min-width: 576px) and (max-width: 992px) {
+  .main-footer {
+    padding-top: 80px;
+  }
+  .main-footer-info {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .main-footer-social {
+    justify-content: center;
+  }
+  .main-footer-menu, .main-footer-contact {
+    flex-basis: 50%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .main-footer-contact ul li {
+    display: inline-block;
+  }
+}
 @media (max-width: 992px) {
   /* Top Header */
   .top-header {
     box-sizing: border-box;
+  }
+  .top-header-contact-block:not(:last-child) {
+    padding: 0 26px;
   }
   .top-header-siteName.fix {
     position: fixed;
@@ -1950,7 +1967,7 @@ body {
     width: 100%;
   }
 
-  .single-page-content {
+  .single-page-content, .price-page .dropdown-container {
     padding-top: 0;
   }
 
@@ -1977,6 +1994,11 @@ body {
     z-index: 3;
     top: -2px;
     bottom: auto;
+  }
+
+  .reviews-card-text-container {
+    min-height: auto;
+    padding: 40px 30px;
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
@@ -2005,10 +2027,589 @@ body {
   .container {
     width: 540px;
   }
+
+  .service {
+    padding: 80px 0 50px;
+  }
+
+  .about-us {
+    padding: 30px 0 50px;
+  }
+
+  .form-block form input[type=submit] {
+    width: 240px;
+  }
+  .form-block form input:not([type=submit]) {
+    width: 240px;
+  }
+
+  .our-team {
+    padding: 80px 0 50px;
+  }
+
+  .reviews {
+    padding: 30px 0 80px;
+  }
+
+  .contact-form.form-block form h2 {
+    font-size: 34px;
+  }
+
+  .single-page-content {
+    padding-bottom: 80px;
+  }
+  .single-page-content.nothing-page {
+    padding: 100px 0;
+  }
+
+  .contact-page-map {
+    height: 300px;
+  }
+  .contact-page-content {
+    padding-bottom: 80px;
+  }
+
+  .price-page-content {
+    padding-top: 30px;
+  }
+  .price-page-content h2 {
+    margin-top: 50px;
+  }
+  .price-page .reviews {
+    padding: 80px 0;
+  }
+
+  .services-main-screen-btn .btnLight {
+    padding: 19px 30px;
+  }
+  .services-page-content {
+    padding: 50px 0;
+  }
+  .services-page .dropdown-container {
+    padding: 30px 0 80px;
+  }
+  .services-page .reviews {
+    padding-top: 80px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .our-team-card {
+    flex-basis: 410px;
+  }
+}
+@media (max-width: 768px) {
+  .stocks-banner-img {
+    display: none;
+  }
+  .stocks-banner-text {
+    flex-basis: 100%;
+  }
+
+  .about-us-slider {
+    width: 100%;
+    padding: 0 0 30px;
+  }
+  .about-us-slide-img {
+    background: transparent !important;
+    height: auto;
+  }
+  .about-us-slide-img img {
+    display: block;
+  }
+
+  .contact-page-map {
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-page-map-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .dropdown-body ul li {
+    display: block;
+  }
+  .dropdown-body ul li span {
+    width: 100%;
+  }
+  .dropdown-body ul li strong {
+    line-height: 24px;
+  }
+  .dropdown-body ul li.stocks span:before {
+    display: none;
+  }
+  .dropdown-body ul li.stocks strong {
+    display: inline-block;
+  }
+  .dropdown-body ul li.stocks strong:after {
+    content: "Акция";
+    background-color: #EA3938;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 62px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 100%;
+    margin-left: 10px;
+    top: 0;
+    z-index: 2;
+    font-size: 10px;
+    font-family: "Gotham Pro", "Raleway", sans-serif;
+  }
+
+  .our-team-container {
+    justify-content: center;
+  }
+
+  .services-main-screen-text p {
+    padding-right: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 576px) {
+  .stocks-banner-text h2 {
+    font-size: 42px;
+  }
+  .stocks-banner-text span {
+    font-size: 16px;
+  }
+
+  .service {
+    padding: 70px 0 50px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .about-us {
+    padding: 20px 0 70px;
+  }
+  .about-us-text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .form-block form h2 {
+    font-size: 32px;
+  }
+  .form-block form h2 span {
+    font-size: 32px;
+    display: inline;
+  }
+  .form-block form p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .form-block form span {
+    font-size: 13px;
+  }
+
+  .our-team {
+    padding: 70px 0 50px;
+  }
+
+  .reviews {
+    padding: 20px 0 70px;
+  }
+
+  .main-footer {
+    padding-top: 70px;
+  }
+
+  .single-page-content {
+    padding-bottom: 70px;
+  }
+  .single-page-content.nothing-page {
+    padding: 80px 0;
+  }
+
+  .contact-page-info h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .contact-page-info p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .contact-page-data .address p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .contact-page-data .phone ul li, .contact-page-data .mail ul li {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .contact-page-data .work-time span {
+    font-size: 16px;
+  }
+  .contact-page-data .work-time ul li {
+    font-size: 16px;
+  }
+  .contact-page-content {
+    padding-bottom: 70px;
+  }
+  .contact-page-map {
+    height: 250px;
+  }
+
+  .contact-form .form-block-container {
+    padding: 70px 0;
+  }
+
+  .dropdown-header h3 {
+    font-size: 20px;
+  }
+  .dropdown-body h4 {
+    font-size: 14px;
+  }
+  .dropdown-body ul li {
+    font-size: 14px;
+  }
+
+  .price-page-content {
+    padding-top: 20px;
+  }
+  .price-page-content h2 {
+    margin-top: 50px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .price-page-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .price-page-content ul li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .price-page .reviews {
+    padding: 50px 0 70px;
+  }
+
+  .stocks-form .form-block-container {
+    padding: 70px 0;
+  }
+
+  .services-page-content {
+    padding: 40px 0 20px;
+  }
+  .services-page-content ul li {
+    font-size: 16px;
+    padding-left: 50px;
+  }
+  .services-page-content ul li:before {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+  .services-page .dropdown-container {
+    padding: 50px 0 70px;
+  }
+  .services-page .reviews {
+    padding-top: 70px;
+  }
+  .services-main-screen-text h1 {
+    font-size: 40px;
+  }
+  .services-main-screen-text p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .services-main-screen-btn .btnDark {
+    padding: 11px 30px;
+  }
+  .services-main-screen-btn .btnLight {
+    padding: 15px 20px;
+  }
 }
 @media (max-width: 576px) {
   .container {
     width: 100%;
+  }
+
+  .about-us-text h3 {
+    font-size: 20px;
+  }
+
+  .stocks-banner {
+    padding-top: 30px;
+  }
+
+  .btnLight {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  .btnDark {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  .heading span {
+    font-size: 16px;
+  }
+  .heading h2 {
+    font-size: 32px;
+    padding-bottom: 8px;
+  }
+  .heading h2:before {
+    height: 5px;
+  }
+
+  .form-block form span {
+    width: 100%;
+  }
+  .form-block form input[type=submit] {
+    margin-left: 0;
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 0;
+  }
+  .form-block form input:not([type=submit]) {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .main-footer-info {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .main-footer-social {
+    justify-content: center;
+  }
+  .main-footer-menu {
+    display: none;
+  }
+  .main-footer-contact {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .main-footer-contact li {
+    display: inline-block;
+  }
+  .main-footer-bottom {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 480px) {
+  .top-header-siteName span {
+    font-size: 14px;
+    display: inline-block;
+    width: calc(100% - 46px);
+  }
+
+  .stocks-banner-text h2 {
+    font-size: 32px;
+  }
+  .stocks-banner-text span {
+    font-size: 16px;
+  }
+
+  .service {
+    padding: 50px 0 20px;
+  }
+  .service-card {
+    background: rgba(103, 205, 253, 0.05) !important;
+  }
+  .service-card-text {
+    width: 100%;
+    padding: 40px 30px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .service-card p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .service-slogan h3 {
+    font-size: 20px;
+  }
+  .service-slogan p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .about-us {
+    padding: 30px 0 50px;
+  }
+  .about-us-text p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .about-us-chief {
+    flex-direction: column;
+  }
+  .about-us-chief-info {
+    margin-top: 15px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .form-block-container {
+    padding: 50px 0 !important;
+  }
+  .form-block form h2 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .form-block form h2 span {
+    font-size: 26px;
+    display: inline;
+  }
+  .form-block form p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .form-block form span {
+    font-size: 13px;
+  }
+
+  .our-team {
+    padding: 50px 0 20px;
+  }
+  .our-team-card {
+    flex-basis: 100%;
+  }
+  .our-team-card h3 {
+    font-size: 16px;
+  }
+  .our-team-card .specialize, .our-team-card .employee {
+    font-size: 14px;
+  }
+
+  .reviews {
+    padding: 30px 0 50px;
+  }
+  .reviews-card-text h3 {
+    font-size: 20px;
+  }
+
+  .contact-form.form-block form h2 {
+    font-size: 20px;
+  }
+
+  .main-footer {
+    padding-top: 50px;
+  }
+  .main-footer-bottom ul {
+    flex-direction: column;
+  }
+  .main-footer-bottom ul li {
+    padding: 0 !important;
+    text-align: center;
+    line-height: 18px;
+  }
+  .main-footer-bottom ul li:after {
+    display: none;
+  }
+
+  .single-page-content {
+    padding: 0 0 50px;
+  }
+  .single-page-content.nothing-page {
+    padding: 70px 0;
+  }
+
+  .contact-page-info h3 {
+    font-size: 20px;
+  }
+  .contact-page-info p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .contact-page-data .address p {
+    font-size: 18px;
+  }
+  .contact-page-data .phone ul li, .contact-page-data .mail ul li {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .contact-page-data .work-time span {
+    font-size: 18px;
+  }
+  .contact-page-data .work-time ul li {
+    font-size: 16px;
+  }
+  .contact-page-map {
+    height: 300px;
+  }
+  .contact-page-content {
+    padding-bottom: 50px;
+  }
+
+  .dropdown-container .heading {
+    margin-bottom: 40px;
+  }
+  .dropdown-header h3 {
+    font-size: 18px;
+  }
+  .dropdown-body h4 {
+    font-size: 16px;
+  }
+  .dropdown-body ul li {
+    font-size: 14px;
+  }
+
+  .price-page-content {
+    padding-top: 20px;
+  }
+  .price-page-content h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .price-page-content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .price-page-content ul li {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .price-page .reviews {
+    padding: 50px 0;
+  }
+
+  .services-page-content {
+    padding: 20px 0 30px;
+  }
+  .services-page-content ul li {
+    font-size: 14px;
+    padding-left: 40px;
+  }
+  .services-page-content ul li:before {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+  }
+  .services-page .dropdown-container {
+    padding: 20px 0 50px;
+  }
+  .services-main-screen-text h1 {
+    font-size: 24px;
+  }
+  .services-main-screen-text p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .services-main-screen-btn {
+    flex-direction: column;
+  }
+  .services-main-screen-btn a {
+    width: 100% !important;
+  }
+  .services-main-screen-btn a.btnDark {
+    margin-left: 0;
+    margin-top: 15px;
   }
 }
 

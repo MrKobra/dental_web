@@ -2,7 +2,16 @@ $(document).ready(function (){
     /* Слайдер о нас на главной */
     $('.about-us-slider').slick({
         dots: true,
-        infinite: false
+        infinite: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     })
     /* Табы */
     $('.dropdown-block.active').find('.dropdown-body').show()
@@ -12,7 +21,7 @@ $(document).ready(function (){
         $(this).parent().find('.dropdown-body').slideToggle(500)
     })
     /* Мобильное меню */
-    /*$('.mobile-btn').on('click', function(){
+    $('.mobile-btn').on('click', function(){
         $(this).toggleClass('active');
         $('.top-nav').toggleClass('active');
     })
@@ -34,5 +43,5 @@ $(document).ready(function (){
     fixedSiteName()
     $(window).resize(function(){
         fixedSiteName();
-    }) */
+    }) 
 })
