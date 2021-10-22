@@ -8,3 +8,8 @@ Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 */
+
+@import 'assets/lib/slick/slick-theme.css';
+@import 'assets/lib/slick/slick.css';
+@import 'assets/lib/magnific-popup/magnific-popup.css';
+@import 'assets/css/style.css';

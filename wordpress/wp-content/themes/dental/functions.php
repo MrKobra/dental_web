@@ -12,6 +12,12 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page();
+
+}
+
 if ( ! function_exists( 'dental_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -50,7 +56,8 @@ if ( ! function_exists( 'dental_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'dental' ),
+				'header_menu' => 'Меню в шапке',
+                'footer_menu' => 'Меню в футере'
 			)
 		);
 
@@ -143,7 +150,17 @@ function dental_scripts() {
 	wp_enqueue_style( 'dental-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'dental-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'dental-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', get_template_directory_uri() . '/assets/lib/jquery/jquery.js');
+    wp_enqueue_script( 'jquery' );
+
+    wp_enqueue_script( 'dental-slick', get_template_directory_uri() . '/assets/lib/slick/slick.min.js', array(), _S_VERSION, true );
+
+    wp_enqueue_script( 'dental-popup', get_template_directory_uri() . '/assets/lib/magnific-popup/jquery.magnific-popup.min.js', array(), _S_VERSION, true );
+
+    wp_enqueue_script( 'dental-script', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
+
+    wp_enqueue_script( 'dental-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
