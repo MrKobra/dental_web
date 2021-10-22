@@ -57,7 +57,7 @@
                     </div>
                     <?php endif; ?>
                     <div class="request top-header-contact-block">
-                        <a href="#" class="btnLight">Заказать звонок</a>
+                        <?php get_template_part('template-parts/sign', 'btn', ['name' => 'Заказать звонок'])?>
                     </div>
                 </div>
             </div>

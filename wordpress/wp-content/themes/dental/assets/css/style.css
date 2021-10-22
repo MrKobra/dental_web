@@ -809,15 +809,16 @@ body {
 .reviews-card-author {
   text-align: center;
 }
-.reviews-card-author p {
+.reviews-card-author h3 {
   font-size: 19px;
   line-height: 29px;
   font-weight: 500;
   margin: 8px 0 0;
 }
-.reviews-card-author span {
+.reviews-card-author p {
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
 }
 
 /* Contact Form */
@@ -1431,6 +1432,13 @@ body {
 @media (min-width: 1200px) and (max-width: 1360px) {
   .container {
     width: 1140px;
+  }
+
+  .reviews {
+    padding: 100px 0;
+  }
+  .reviews-card-text-container {
+    min-height: 280px;
   }
 
   /* Top Header */
