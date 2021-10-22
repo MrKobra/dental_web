@@ -44,4 +44,16 @@ $(document).ready(function (){
     $(window).resize(function(){
         fixedSiteName();
     })
+    /* Значок акции */
+    $('.dropdown-row').each(function (){
+        $(this).find('li').each(function(){
+            text = $(this).html();
+            text = text.split('<strong>');
+            $(this).html('<span>'+text[0]+'</span>'+'<strong>'+text[1]);
+            if($(this).find('em').length != 0) {
+                console.log($(this));
+                $(this).addClass('stocks');
+            }
+        })
+    })
 })

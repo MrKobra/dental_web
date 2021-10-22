@@ -1238,7 +1238,7 @@ body {
   z-index: 2;
   padding-left: 3px;
 }
-.dropdown-body ul li strong i {
+.dropdown-body ul li strong em {
   font-family: "Raleway", "Gotham Pro", sans-serif;
   font-weight: 400;
   color: #58595B;
@@ -1472,6 +1472,10 @@ body {
   }
   .reviews-card-text-container {
     min-height: 280px;
+  }
+
+  .contact-page-content {
+    padding-bottom: 100px;
   }
 
   /* Top Header */
