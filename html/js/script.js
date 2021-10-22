@@ -43,5 +43,5 @@ $(document).ready(function (){
     fixedSiteName()
     $(window).resize(function(){
         fixedSiteName();
-    }) 
+    })
 })
