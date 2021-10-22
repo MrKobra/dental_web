@@ -495,7 +495,7 @@ body {
 .about-us {
   padding: 100px 0 150px;
 }
-.about-us .heading span {
+.about-us .heading span, .about-us .heading p {
   width: 60%;
 }
 .about-us-container {
@@ -659,7 +659,7 @@ body {
 .our-team {
   padding: 150px 0 50px;
 }
-.our-team .heading span {
+.our-team .heading span, .our-team .heading p {
   width: 40%;
 }
 .our-team-container {
@@ -750,7 +750,7 @@ body {
 .reviews {
   padding: 100px 0 240px;
 }
-.reviews .heading span {
+.reviews .heading span, .reviews .heading p {
   width: 50%;
 }
 .reviews-container {
@@ -1030,7 +1030,7 @@ body {
 .services-page-content {
   padding: 150px 0 50px;
 }
-.services-page-content .heading span {
+.services-page-content .heading span, .services-page-content .heading p {
   width: 60%;
 }
 .services-page-content ul {
@@ -1228,7 +1228,7 @@ body {
 .price-page .dropdown-container .heading {
   margin-bottom: 50px;
 }
-.price-page .dropdown-container .heading span {
+.price-page .dropdown-container .heading span, .price-page .dropdown-container .heading p {
   width: 60%;
 }
 .price-page-content {
