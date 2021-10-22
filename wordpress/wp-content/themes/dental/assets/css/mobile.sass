@@ -23,23 +23,23 @@
 
   /* Stocks Form */
   .stocks-form
-    form
-      position: relative
-      z-index: 2
-    .form-block-container
-      position: relative
-      &:after
-        content: ''
-        width: 490px
-        height: 405px
-        position: absolute
-        background: url(../img/stocks-form.png)
-        background-size: cover
-        right: 0
-        top: 50%
-        transform: translateY(-50%)
-        margin-top: 10px
-        z-index: 1
+    .form-block
+      &-text
+        position: relative
+        z-index: 2
+      &-container
+        position: relative
+        &:after
+          content: ''
+          width: 490px
+          height: 405px
+          position: absolute
+          background: url(../img/stocks-form.png)
+          background-size: cover
+          right: 0
+          top: 60px
+          margin-top: 10px
+          z-index: 1
 
   /* Our Team */
   .our-team
@@ -201,7 +201,7 @@
 
   /* Form Block */
   .form-block
-    form
+    &-text
       width: 100%
 
   /* Reviews */
@@ -528,7 +528,7 @@
 
   /* Form Block */
   .form-block
-    form
+    &-text
       input
         &:not([type=submit])
           height: 50px
@@ -549,7 +549,7 @@
     padding: 30px 0 50px
 
   .form-block
-    form
+    &-text
       input
         &[type=submit]
           width: 240px
@@ -564,7 +564,7 @@
 
   .contact-form
     &.form-block
-      form
+      &-text
         h2
           font-size: 34px
 
@@ -695,7 +695,7 @@
         line-height: 24px
 
   .form-block
-    form
+    &-text
       h2
         font-size: 32px
         span
@@ -846,7 +846,7 @@
         height: 5px
 
   .form-block
-    form
+    &-text
       span
         width: 100%
       input
@@ -927,7 +927,7 @@
   .form-block
     &-container
       padding: 50px 0 !important
-    form
+    &-text
       h2
         font-size: 26px
         line-height: 34px
@@ -956,7 +956,7 @@
 
   .contact-form
     &.form-block
-      form
+      &-text
         h2
           font-size: 20px
 

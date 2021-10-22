@@ -93,6 +93,8 @@ get_header();
     </div>
     <?php endif; ?>
 
+    <?php get_template_part('template-parts/stocks-form'); ?>
+
     <?php if(get_field('our_team')): ?>
     <div class="our-team">
         <div class="container">
@@ -186,6 +188,7 @@ get_header();
     <?php endif;
     wp_reset_postdata(); ?>
 
+    <?php get_template_part('template-parts/contact-form'); ?>
 
 <?php
 get_footer();

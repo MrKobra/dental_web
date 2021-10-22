@@ -580,34 +580,48 @@ body {
 .form-block-container {
   padding: 80px;
 }
-.form-block form {
+.form-block form .wpcf7-spinner {
+  display: none !important;
+}
+.form-block form .wpcf7-not-valid-tip {
+  display: none;
+}
+.form-block form .wpcf7-response-output {
+  font-size: 15px;
+  margin: 15px 0 0;
+  border: none;
+  padding: 0;
+  font-family: "Raleway", "Gotham Pro", sans-serif;
+  line-height: 24px;
+}
+.form-block-text {
   width: 580px;
 }
-.form-block form h2 {
+.form-block-text h2 {
   font-family: "Gotham Pro", "Raleway", sans-serif;
   font-size: 40px;
   line-height: 48px;
   margin: 0;
 }
-.form-block form h2 span {
+.form-block-text h2 span {
   color: #EA3938;
   font-size: 40px;
 }
-.form-block form p {
+.form-block-text p {
   font-size: 20px;
   line-height: 28px;
   margin: 20px 0 0;
   color: #172B52;
 }
-.form-block form p a {
+.form-block-text p a {
   color: #38BCEA;
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
 }
-.form-block form p a:hover {
+.form-block-text p a:hover {
   border-color: #38BCEA;
 }
-.form-block form input:not([type=submit]) {
+.form-block-text input:not([type=submit]) {
   width: 255px;
   height: 71px;
   border-radius: 5px;
@@ -615,15 +629,18 @@ body {
   font-size: 24px;
   padding: 0 20px;
   color: #BBBBBB;
-  border: none;
+  border: 1px solid transparent;
 }
-.form-block form input:not([type=submit])::-moz-placeholder {
+.form-block-text input:not([type=submit])::-moz-placeholder {
   opacity: 1;
 }
-.form-block form input:not([type=submit])::-webkit-input-placeholder {
+.form-block-text input:not([type=submit])::-webkit-input-placeholder {
   opacity: 1;
 }
-.form-block form input[type=submit] {
+.form-block-text input:not([type=submit]).wpcf7-not-valid {
+  border-color: #EA3938;
+}
+.form-block-text input[type=submit] {
   width: 295px;
   text-align: center;
   border: none;
@@ -632,27 +649,28 @@ body {
   margin-left: 20px;
   margin-top: 10px;
 }
-.form-block form input[type=submit]:hover {
+.form-block-text input[type=submit]:hover {
   cursor: pointer;
 }
-.form-block form span {
+.form-block-text span {
   font-size: 15px;
   line-height: 21px;
   color: #6C6C6A;
   display: inline-block;
   margin-top: 10px;
 }
-.form-block form span a {
+.form-block-text span a {
   border-bottom: 1px solid #6C6C6A;
 }
-.form-block form span a:hover {
+.form-block-text span a:hover {
   color: #38BCEA;
   border-color: #38BCEA;
 }
 
 /* Stocks Form */
 .stocks-form .form-block-container {
-  background: url(../img/stocks-form.png) no-repeat right bottom;
+  background: url(../img/stocks-form.png) no-repeat right 50px;
+  background-size: 650px;
 }
 
 /* Our Team */
@@ -1470,7 +1488,7 @@ body {
   }
 
   /* Stocks Form */
-  .stocks-form form {
+  .stocks-form .form-block-text {
     position: relative;
     z-index: 2;
   }
@@ -1485,8 +1503,7 @@ body {
     background: url(../img/stocks-form.png);
     background-size: cover;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 60px;
     margin-top: 10px;
     z-index: 1;
   }
@@ -1666,7 +1683,7 @@ body {
   }
 
   /* Form Block */
-  .form-block form {
+  .form-block-text {
     width: 100%;
   }
 
@@ -2039,11 +2056,11 @@ body {
   }
 
   /* Form Block */
-  .form-block form input:not([type=submit]) {
+  .form-block-text input:not([type=submit]) {
     height: 50px;
     font-size: 18px;
   }
-  .form-block form input[type=submit] {
+  .form-block-text input[type=submit] {
     font-size: 18px;
     height: 50px;
     padding: 0;
@@ -2062,10 +2079,10 @@ body {
     padding: 30px 0 50px;
   }
 
-  .form-block form input[type=submit] {
+  .form-block-text input[type=submit] {
     width: 240px;
   }
-  .form-block form input:not([type=submit]) {
+  .form-block-text input:not([type=submit]) {
     width: 240px;
   }
 
@@ -2077,7 +2094,7 @@ body {
     padding: 30px 0 80px;
   }
 
-  .contact-form.form-block form h2 {
+  .contact-form.form-block-text h2 {
     font-size: 34px;
   }
 
@@ -2219,18 +2236,18 @@ body {
     line-height: 24px;
   }
 
-  .form-block form h2 {
+  .form-block-text h2 {
     font-size: 32px;
   }
-  .form-block form h2 span {
+  .form-block-text h2 span {
     font-size: 32px;
     display: inline;
   }
-  .form-block form p {
+  .form-block-text p {
     font-size: 16px;
     line-height: 24px;
   }
-  .form-block form span {
+  .form-block-text span {
     font-size: 13px;
   }
 
@@ -2386,16 +2403,16 @@ body {
     height: 5px;
   }
 
-  .form-block form span {
+  .form-block-text span {
     width: 100%;
   }
-  .form-block form input[type=submit] {
+  .form-block-text input[type=submit] {
     margin-left: 0;
     width: 100%;
     font-size: 16px;
     padding: 14px 0;
   }
-  .form-block form input:not([type=submit]) {
+  .form-block-text input:not([type=submit]) {
     width: 100%;
     height: 50px;
     font-size: 16px;
@@ -2482,19 +2499,19 @@ body {
   .form-block-container {
     padding: 50px 0 !important;
   }
-  .form-block form h2 {
+  .form-block-text h2 {
     font-size: 26px;
     line-height: 34px;
   }
-  .form-block form h2 span {
+  .form-block-text h2 span {
     font-size: 26px;
     display: inline;
   }
-  .form-block form p {
+  .form-block-text p {
     font-size: 16px;
     line-height: 24px;
   }
-  .form-block form span {
+  .form-block-text span {
     font-size: 13px;
   }
 
@@ -2518,7 +2535,7 @@ body {
     font-size: 20px;
   }
 
-  .contact-form.form-block form h2 {
+  .contact-form.form-block-text h2 {
     font-size: 20px;
   }
 

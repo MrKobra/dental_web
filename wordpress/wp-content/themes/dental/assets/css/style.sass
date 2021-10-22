@@ -310,6 +310,18 @@
   &-container
     padding: 80px
   form
+    .wpcf7-spinner
+      display: none !important
+    .wpcf7-not-valid-tip
+      display: none
+    .wpcf7-response-output
+      font-size: 15px
+      margin: 15px 0 0
+      border: none
+      padding: 0
+      font-family: $mFont, $hFont, sans-serif
+      line-height: 24px
+  &-text
     width: 580px
     h2
       font-family: $hFont, $mFont, sans-serif
@@ -339,11 +351,13 @@
         font-size: 24px
         padding: 0 20px
         color: #BBBBBB
-        border: none
+        border: 1px solid transparent
         &::-moz-placeholder
           opacity: 1
         &::-webkit-input-placeholder
           opacity: 1
+        &.wpcf7-not-valid
+          border-color: #EA3938
       &[type=submit]
         width: 295px
         text-align: center
@@ -370,7 +384,8 @@
 
 .stocks-form
   .form-block-container
-    background: url(../img/stocks-form.png) no-repeat right bottom
+    background: url(../img/stocks-form.png) no-repeat right 50px
+    background-size: 650px
 
 /* Our Team */
 .our-team
