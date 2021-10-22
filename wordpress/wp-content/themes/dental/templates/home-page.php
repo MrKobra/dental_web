@@ -48,15 +48,18 @@ get_header();
     <?php endif; ?>
 
     <?php $services = get_field('service_cat', 'options');
-    $posts = get_posts( array(
-        'numberposts' => 7,
-        'category'    => $services,
-        'orderby'     => 'date',
-        'order'       => 'DESC',
-        'post_type'   => 'post',
-        'suppress_filters' => true,
-    ) );
-    if($posts):
+    $categories = get_categories( [
+        'taxonomy'     => 'category',
+        'type'         => 'post',
+        'parent'       => $services,
+        'orderby'      => 'date',
+        'order'        => 'DESC',
+        'hide_empty'   => 0,
+        'number'       => 0,
+        'pad_counts'   => false,
+    ] );
+
+    if( $categories ):
     ?>
     <div class="service">
         <div class="container">
@@ -65,14 +68,14 @@ get_header();
             </div>
             <div class="service-container">
                 <?php
-                foreach( $posts as $post ):
-                    setup_postdata($post);
+                foreach( $categories as $cat ):
+                    $img = get_field('cat_img', 'category_'.$cat->term_id);
                 ?>
-                <div class="service-card" style="background: rgba(103, 205, 253, 0.05) url(<?php echo get_the_post_thumbnail_url(); ?>) no-repeat right bottom">
+                <div class="service-card" style="background: rgba(103, 205, 253, 0.05) url(<?php echo $img['url']; ?>) no-repeat right bottom">
                     <div class="service-card-text">
                         <div class="service-card-info">
-                            <h3><?php the_title(); ?></h3>
-                            <?php the_excerpt(); ?>
+                            <h3><?php echo $cat->name; ?></h3>
+                            <?php if(get_field('description', 'category_'.$cat->term_id)) { the_field('description', 'category_'.$cat->term_id); } ?>
                         </div>
                         <div class="service-card-link">
                             <a href="<?php echo get_page_link(get_field('price_page', 'options')); ?>">Подробнее</a>
