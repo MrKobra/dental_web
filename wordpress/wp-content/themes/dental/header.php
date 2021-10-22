@@ -64,18 +64,19 @@
         </div>
     </div>
 </header>
-<?php /*
+
 <nav class="top-nav">
     <div class="container">
         <div class="top-nav-container">
-            <ul>
-                <li class="menu-item-has-child"><a href="#">Услуги</a></li>
-                <li><a href="#">Цены</a></li>
-                <li><a href="#">Наши врачи</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
+            <?php
+            wp_nav_menu( [
+                'theme_location'  => 'header_menu',
+                'container'       => '',
+                'items_wrap'      => '<ul>%3$s</ul>',
+                'depth'           => 0,
+                'walker'          => '',
+            ] );
+            ?>
         </div>
     </div>
-</nav> */ ?>
+</nav>

@@ -35,14 +35,15 @@
                 <div class="main-footer-heading">
                     <span>Меню</span>
                 </div>
-                <?php /*
-                <ul>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Специалисты</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul> */ ?>
+                <?php
+                wp_nav_menu( [
+                    'theme_location'  => 'footer_menu',
+                    'container'       => '',
+                    'items_wrap'      => '<ul>%3$s</ul>',
+                    'depth'           => 0,
+                    'walker'          => '',
+                ] );
+                ?>
             </div>
             <div class="main-footer-contact">
                 <div class="main-footer-heading">
