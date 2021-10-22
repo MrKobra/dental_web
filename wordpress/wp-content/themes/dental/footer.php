@@ -11,22 +11,74 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dental' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'dental' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'dental' ), 'dental', '<a href="http://underscores.me/">Mr-Kobra</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="main-footer">
+    <div class="main-footer-top">
+        <div class="container">
+            <div class="main-footer-info">
+                <div class="logo">
+                    <?php the_custom_logo(); ?>
+                </div>
+                <p>Для записи на прием и получения более подробной информации звоните по телефону клиники или непосредственно Главврачу</p>
+                <ul class="main-footer-social">
+                    <?php if(get_field('instagram', 'options')): ?>
+                    <li><a target="_blank" href="<?php the_field('instagram', 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="Инстаграм"></a></li>
+                    <?php endif; ?>
+                    <?php if(get_field('twitter','options')): ?>
+                    <li><a target="_blank" href="<?php the_field('twitter', 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.png" alt="Твитер"></a></li>
+                    <?php endif; ?>
+                    <?php if(get_field('youtube', 'options')): ?>
+                    <li><a target="_blank" href="<?php the_field('youtube', 'options'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube.png" alt="Ютуб"></a></li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+            <div class="main-footer-menu">
+                <div class="main-footer-heading">
+                    <span>Меню</span>
+                </div>
+                <?php /*
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Специалисты</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul> */ ?>
+            </div>
+            <div class="main-footer-contact">
+                <div class="main-footer-heading">
+                    <span>Контакты</span>
+                </div>
+                <?php if(get_field('mail', 'options')): ?>
+                <div class="main-footer-mail">
+                    <?php the_field('mail', 'options'); ?>
+                </div>
+                <?php endif; ?>
+                <?php if(get_field('phone', 'options')): ?>
+                <div class="main-footer-phone">
+                    <?php the_field('phone', 'options'); ?>
+                </div>
+                <?php endif; ?>
+                <?php if(get_field('address','options')): ?>
+                <div class="main-footer-map">
+                    <?php the_field('address','options'); ?>
+                </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    <div class="main-footer-bottom">
+        <div class="container">
+            <div class="copy">
+                <p>© 2021 kolomeycev-dent.ru. All rights reserved</p>
+            </div>
+            <ul>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Документация</a></li>
+                <li><a href="#">Карта сайта</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
 

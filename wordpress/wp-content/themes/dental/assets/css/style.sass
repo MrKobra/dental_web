@@ -598,6 +598,19 @@
           left: 0
           top: 50%
           margin-top: -12px
+    p
+      margin: 30px 0 0
+      font-size: 14px
+      padding-left: 36px
+      position: relative
+      &:first-child:before
+        content: ''
+        width: 24px
+        height: 24px
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -12px
   &-mail
     ul
       li
@@ -609,10 +622,9 @@
         &:first-child:before
           background: url(../img/phone.png) no-repeat center center
   &-map
-    ul
-      li
-        &:first-child:before
-          background: url(../img/map.png) no-repeat center center
+    p
+      &:first-child:before
+        background: url(../img/map.png) no-repeat center center
   &-bottom
     padding: 50px 0 30px
     p
