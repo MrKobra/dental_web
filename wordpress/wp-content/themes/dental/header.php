@@ -22,38 +22,60 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dental' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$dental_description = get_bloginfo( 'description', 'display' );
-			if ( $dental_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $dental_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dental' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+<header class="top-header">
+    <div class="top-header-siteName">
+        <div class="container">
+            <span><?php bloginfo('title'); ?></span>
+            <div class="mobile-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="top-header-content">
+        <div class="container">
+            <div class="top-header-container">
+                <div class="logo">
+                    <?php the_custom_logo(); ?>
+                </div>
+                <div class="top-header-contact">
+                    <?php if(get_field('address','options')): ?>
+                    <div class="address top-header-contact-block">
+                        <?php the_field('address','options'); ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php if(get_field('work_time','options')): ?>
+                    <div class="work-time top-header-contact-block">
+                        <?php the_field('work_time','options'); ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php if(get_field('phone','options')): ?>
+                    <div class="telephone top-header-contact-block">
+                        <?php the_field('phone','options'); ?>
+                    </div>
+                    <?php endif; ?>
+                    <div class="request top-header-contact-block">
+                        <a href="#" class="btnLight">Заказать звонок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<?php /*
+<nav class="top-nav">
+    <div class="container">
+        <div class="top-nav-container">
+            <ul>
+                <li class="menu-item-has-child"><a href="#">Услуги</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Наши врачи</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</nav> */ ?>

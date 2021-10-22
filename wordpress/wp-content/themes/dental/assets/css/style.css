@@ -215,6 +215,9 @@ body {
 }
 
 /* Header Styles */
+.top-header .logo img {
+  height: auto;
+}
 .top-header .mobile-btn {
   display: none;
 }
@@ -257,7 +260,7 @@ body {
   margin: 0;
   color: #172B52;
 }
-.top-header-contact-block p i {
+.top-header-contact-block p em {
   color: #999999;
   font-style: normal;
 }
