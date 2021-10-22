@@ -81,7 +81,7 @@ body {
   left: 0;
   bottom: 0;
 }
-.heading span {
+.heading span, .heading p {
   font-size: 18px;
   line-height: 24px;
   color: #6C6C6A;
@@ -1628,7 +1628,7 @@ body {
   }
 
   /* About Us */
-  .about-us .heading span {
+  .about-us .heading span, .about-us .heading p {
     width: 100%;
   }
   .about-us-container {
@@ -1648,7 +1648,7 @@ body {
   }
 
   /* Reviews */
-  .reviews .heading span {
+  .reviews .heading span, .reviews .heading p {
     width: 100%;
   }
 
@@ -1666,7 +1666,7 @@ body {
   }
 
   /* Price Page */
-  .price-page .dropdown-container .heading span {
+  .price-page .dropdown-container .heading span, .price-page .dropdown-container p span {
     width: 100%;
   }
   .price-page-content h2, .price-page-content p {
@@ -1685,12 +1685,12 @@ body {
   .services-main-screen-text {
     width: 100%;
   }
-  .services-page-content .heading span {
+  .services-page-content .heading span, .services-page-content p span {
     width: 100%;
   }
 
   /* Our Team */
-  .our-team .heading span {
+  .our-team .heading span, .our-team .heading p {
     width: 100%;
   }
 }
@@ -2352,7 +2352,7 @@ body {
     padding: 15px 30px;
   }
 
-  .heading span {
+  .heading span, .heading p {
     font-size: 16px;
   }
   .heading h2 {
