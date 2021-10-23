@@ -1,6 +1,6 @@
-<?php $reviews = get_field('reviews_cat');
+<?php $reviews = get_field('reviews_cat', 'options');
 $posts = get_posts( array(
-    'numberposts' => 3,
+    'numberposts' => $args['count'],
     'category'    => $reviews,
     'orderby'     => 'date',
     'order'       => 'DESC',
@@ -24,6 +24,7 @@ if($posts):
                     <div class="reviews-card">
                         <div class="reviews-card-text">
                             <div class="reviews-card-text-container">
+                                <h3><?php the_title(); ?></h3>
                                 <?php the_content(); ?>
                             </div>
                         </div>

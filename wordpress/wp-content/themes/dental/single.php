@@ -10,31 +10,61 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+    <div class="services-page">
+        <?php if(have_posts()):
+        the_post(); ?>
+        <div class="services-main-screen">
+            <div class="container">
+                <div class="services-main-screen-text">
+                    <h1><?php the_title(); ?></h1>
+                    <?php the_excerpt(); ?>
+                    <div class="services-main-screen-btn">
+                        <?php get_template_part('template-parts/sign', 'btn', ['name'=>'Записаться на прием']); ?>
+                        <a href="<?php echo get_page_link(get_field('price_page', 'options')); ?>" class="btnDark">Помотреть цены</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services-page-content">
+            <div class="container">
+                <?php the_content(); ?>
+            </div>
+        </div>
+            <div class="dropdown-container">
+                <div class="container">
+                    <?php if(get_field('dropdown_heading')): ?>
+                        <div class="heading">
+                            <?php the_field('dropdown_heading'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if(get_field('dropdown_menu')):
+                        $i = 0;
+                        while(has_sub_field('dropdown_menu')):
+                            $i++; ?>
+                            <div class="dropdown-block <?php if($i == 1) { echo 'active'; } ?>">
+                                <a href="#" class="dropdown-header">
+                                    <h3><?php the_sub_field('dropdown_heading'); ?></h3>
+                                    <div class="dropdown-arrow"></div>
+                                </a>
+                                <?php if(get_sub_field('dropdown_row')): ?>
+                                    <div class="dropdown-body">
+                                        <?php while(has_sub_field('dropdown_row')): ?>
+                                            <div class="dropdown-row">
+                                                <?php the_sub_field('dropdown_list'); ?>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php get_template_part('template-parts/stocks-form'); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'dental' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'dental' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+        <?php get_template_part('template-parts/reviews'); ?>
+    </div>
 
 <?php
-get_sidebar();
 get_footer();

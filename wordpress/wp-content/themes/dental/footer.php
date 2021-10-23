@@ -81,6 +81,12 @@
     </div>
 </footer>
 
+<div class="popup-window" id="request-popup">
+    <div class="popup-window-container">
+        <?php echo do_shortcode('[contact-form-7 id="209" title="Модальное окно"]'); ?>
+    </div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

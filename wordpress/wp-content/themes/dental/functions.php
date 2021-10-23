@@ -168,6 +168,11 @@ function dental_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dental_scripts' );
 
+## Удаляет "Рубрика: ", "Метка: " и т.д. из заголовка архива
+add_filter( 'get_the_archive_title', function( $title ){
+    return preg_replace('~^[^:]+: ~', '', $title );
+});
+
 /**
  * Implement the Custom Header feature.
  */

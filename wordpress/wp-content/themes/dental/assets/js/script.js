@@ -32,12 +32,19 @@ $(document).ready(function (){
             $('.top-header-siteName').addClass('fix');
             $('.top-header').css('padding-top', siteNameHeight);
             $('.top-nav').css('padding-top', siteNameHeight);
+            $('.menu-item-has-children a').on('click', function(){
+                if($(this).parent().find('.sub-menu').length != 0) {
+                    $(this).parent().find('.sub-menu:eq(0)').toggleClass('active-sub');
+                    return false;
+                }
+            })
         } else {
             $('.top-header-siteName').removeClass('fix');
             $('.top-header').css('padding-top', 0);
             $('.top-nav').css('padding-top', siteNameHeight);
             $('.top-nav').removeClass('active')
             $('.mobile-btn').removeClass('active')
+            $('.sub-menu').removeClass('active-sub')
         }
     }
     fixedSiteName()
@@ -51,9 +58,16 @@ $(document).ready(function (){
             text = text.split('<strong>');
             $(this).html('<span>'+text[0]+'</span>'+'<strong>'+text[1]);
             if($(this).find('em').length != 0) {
-                console.log($(this));
                 $(this).addClass('stocks');
             }
         })
+    })
+
+    /* Popup */
+    $('.popup-link').each(function(){
+        console.log($(this));
+        $(this).magnificPopup({
+            type:'inline',
+        });
     })
 })

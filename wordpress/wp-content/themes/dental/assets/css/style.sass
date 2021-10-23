@@ -88,10 +88,76 @@
       font-size: 16px
       line-height: 19px
       margin: 0 25px
+      padding: 3px 0
       a
         &:hover
           color: $normal
-      &.menu-item-has-child
+      &.menu-item-has-children
+        position: relative
+        &:hover
+          .sub-menu
+            display: block
+            .sub-menu
+              display: none
+        .sub-menu
+          display: none
+          position: absolute
+          border: 1px solid #EEEEEE
+          background: #ffffff
+          padding: 20px 0
+          flex-direction: column
+          z-index: 100
+          top: 100%
+          left: 50%
+          transform: translateX(-50%)
+          width: 250px
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1)
+          box-sizing: border-box
+          li
+            margin: 0
+            &.menu-item-has-children
+              position: static
+              a
+                &:before
+                  content: ''
+                  width: 5px
+                  height: 9px
+                  background: url(../img/menu-arrow.png) no-repeat center center
+                  position: absolute
+                  right: 30px
+                  top: 50%
+                  margin-top: -4px
+              .sub-menu
+                display: none
+                left: 100%
+                bottom: 0
+                top: auto
+                transform: none
+                .menu-item-has-children
+                  &:hover
+                    .sub-menu
+                      display: block
+                      a 
+                        &:before
+                          display: none!important
+                .sub-menu
+                  display: none
+              &:hover
+                .sub-menu
+                  display: block
+                  .sub-menu
+                    display: none
+            a
+              color: #000
+              padding: 10px 40px 10px 30px
+              display: block
+              &:hover
+                background: $hover
+              &:after
+                display: none
+          .sub-menu
+            display: none
+
         a
           color: #EA3938
           position: relative
@@ -721,9 +787,26 @@
           border-color: $active
   &-page-content
     padding: 150px 0 50px
-    .heading
-      span, p
-        width: 60%
+    h2
+      font-family: $hFont, $mFont, sans-serif
+      font-size: 40px
+      margin: 0
+      position: relative
+      padding-bottom: 12px
+      &:before
+        content: ''
+        width: 97px
+        height: 7px
+        background: $normal
+        position: absolute
+        left: 0
+        bottom: 0
+    p
+      font-size: 18px
+      line-height: 24px
+      color: #6C6C6A
+      display: block
+      margin-top: 5px
     ul
       margin: 0
       padding: 35px 0 0
@@ -1061,16 +1144,125 @@
 .single-page
   &-content
     padding: 50px 0 200px
+    .heading
+      p
+        margin: 5px 0 0
     p
       font-size: 16px
       line-height: 24px
       margin: 30px 0 0
-    a
+    a:not(.our-team a)
       color: $normal
       border-bottom: 1px solid transparent
       &:hover
         border-color: $normal
     &.nothing-page
       padding: 100px 0 200px
+    .our-team
+      padding-top: 100px
+      &-container
+        margin-top: 0
+    .reviews
+      padding: 0
+      &-container
+        flex-wrap: wrap
+        justify-content: center
+      &-card
+        display: block!important
+        flex-basis: calc(33.33% - 20px)
+        p
+          font-size: 14px
+          line-height: 21px
+          margin: 10px 0 0
+        &-author
+          p
+            margin: 0
+    .about-us
+      padding-bottom: 0
+
+/* Popup Window */
+.mfp-content
+  .popup-window
+    display: block
+.popup-window
+  display: none
+  position: relative
+  width: 400px
+  margin: 50px auto
+  background: $normal
+  padding: 30px 40px 40px
+  box-sizing: border-box
+  border-radius: 5px
+  .mfp-close
+    color: #ffffff
+  form
+    .wpcf7-spinner
+      display: none !important
+    .wpcf7-not-valid-tip
+      display: none
+    .wpcf7-response-output
+      font-size: 15px
+      margin: 15px 0 0
+      border: none
+      padding: 0
+      font-family: $mFont, $hFont, sans-serif
+      line-height: 24px
+      text-align: center
+    p
+      margin: 0
+    input
+      &:not([type=submit])
+        width: 100%
+        height: 51px
+        border-radius: 5px
+        box-sizing: border-box
+        font-size: 16px
+        padding: 0 20px
+        color: #BBBBBB
+        background: #ffffff
+        border: 1px solid transparent
+        margin-top: 10px
+        &::-moz-placeholder
+          opacity: 1
+        &::-webkit-input-placeholder
+          opacity: 1
+        &.wpcf7-not-valid
+          border-color: #EA3938
+      &[type=submit]
+        width: 100%
+        text-align: center
+        padding: 15px 0
+        transition: all .2s linear
+        margin-top: 30px
+        font-size: 16px
+        background: transparent
+        border-color: #ffffff
+        &:hover
+          border-color: #246CE2
+          cursor: pointer
+        &:active
+          border-color: #0B2550
+          background: #0B2550
+    textarea
+      width: 100%
+      height: 100px
+      resize: none
+      border-radius: 5px
+      box-sizing: border-box
+      font-size: 16px
+      padding: 10px 20px
+      color: #BBBBBB
+      background: #ffffff
+      border: 1px solid transparent
+      margin-top: 10px
+      &::-moz-placeholder
+        opacity: 1
+        font-style: normal
+        font-family: $mFont, $hFont, sans-serif
+      &::-webkit-input-placeholder
+        opacity: 1
+        font-style: normal
+        font-family: $mFont, $hFont, sans-serif
+
 
 @import "mobile.sass"
