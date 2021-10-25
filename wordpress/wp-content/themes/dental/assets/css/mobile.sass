@@ -31,21 +31,8 @@
     .form-block
       &-text
         position: relative
-        z-index: 2
       &-container
-        position: relative
-        &:after
-          content: ''
-          width: 490px
-          height: 405px
-          position: absolute
-          background: url(../img/stocks-form.png)
-          background-size: cover
-          right: 0
-          top: 60px
-          margin-top: 10px
-          z-index: 1
-
+        background-size: 470px!important
   .our-team
     &-card
       flex-basis: calc(33.33% - 12px)
@@ -81,10 +68,6 @@
         padding-left: 50px
       &:first-child
         padding-left: 0
-
-  .stocks-form
-    .form-block-container
-      background: transparent
 
   .services
     &-main-screen
@@ -168,6 +151,11 @@
       padding: 80px 0 40px
 
 @media (max-width: 1200px)
+  .stocks-form
+    .form-block
+      &-container
+        background: transparent!important
+
   .price-page
     .dropdown-container
       .heading
@@ -889,6 +877,8 @@
       margin-top: 30px
       li
         display: inline-block
+      p
+        display: inline-block
     &-bottom
       flex-direction: column-reverse
       .copy
@@ -930,10 +920,12 @@
   .service
     padding: 50px 0 20px
     &-card
-      background: rgba(103, 205, 253, 0.05) !important
+      background-size: auto 140px!important
+      background-position: center 5px!important
       &-text
         width: 100%
-        padding: 40px 30px
+        padding: 160px 30px 40px
+        text-align: center
       h3
         font-size: 20px
         line-height: 24px

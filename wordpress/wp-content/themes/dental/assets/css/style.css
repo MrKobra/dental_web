@@ -316,6 +316,9 @@ body {
   margin: 0 25px;
   padding: 3px 0;
 }
+.top-nav ul li.current-menu-item a {
+  color: #EA3938;
+}
 .top-nav ul li a:hover {
   color: #38BCEA;
 }
@@ -396,7 +399,6 @@ body {
   display: none;
 }
 .top-nav ul li.menu-item-has-children a {
-  color: #EA3938;
   position: relative;
   display: inline-block;
   padding-right: 25px;
@@ -1722,22 +1724,9 @@ body {
 
   .stocks-form .form-block-text {
     position: relative;
-    z-index: 2;
   }
   .stocks-form .form-block-container {
-    position: relative;
-  }
-  .stocks-form .form-block-container:after {
-    content: "";
-    width: 490px;
-    height: 405px;
-    position: absolute;
-    background: url(../img/stocks-form.png);
-    background-size: cover;
-    right: 0;
-    top: 60px;
-    margin-top: 10px;
-    z-index: 1;
+    background-size: 470px !important;
   }
 
   .our-team-card {
@@ -1775,10 +1764,6 @@ body {
   }
   .stocks-banner .advantages-card:first-child {
     padding-left: 0;
-  }
-
-  .stocks-form .form-block-container {
-    background: transparent;
   }
 
   .services-main-screen-text {
@@ -1876,6 +1861,10 @@ body {
   }
 }
 @media (max-width: 1200px) {
+  .stocks-form .form-block-container {
+    background: transparent !important;
+  }
+
   .price-page .dropdown-container .heading p {
     width: 100%;
   }
@@ -2682,6 +2671,9 @@ body {
   .main-footer-contact li {
     display: inline-block;
   }
+  .main-footer-contact p {
+    display: inline-block;
+  }
   .main-footer-bottom {
     flex-direction: column-reverse;
   }
@@ -2731,11 +2723,13 @@ body {
     padding: 50px 0 20px;
   }
   .service-card {
-    background: rgba(103, 205, 253, 0.05) !important;
+    background-size: auto 140px !important;
+    background-position: center 5px !important;
   }
   .service-card-text {
     width: 100%;
-    padding: 40px 30px;
+    padding: 160px 30px 40px;
+    text-align: center;
   }
   .service-card h3 {
     font-size: 20px;
