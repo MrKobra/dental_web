@@ -3,22 +3,28 @@
 get_header();
 ?>
 
-    <?php if(get_field('main_screen_text') || get_field('main_screen_img')): ?>
+    <?php if(get_field('stocks_slider')): ?>
     <div class="stocks-banner">
         <div class="container">
-            <div class="stocks-banner-container">
-                <?php if(get_field('main_screen_text')): ?>
-                <div class="stocks-banner-text">
-                    <?php the_field('main_screen_text'); ?>
-                    <?php get_template_part('template-parts/sign', 'btn', ['name' => 'Записаться на прием']); ?>
-                </div>
-                <?php endif; ?>
-                <?php $img = get_field('main_screen_img');
-                if($img): ?>
-                <div class="stocks-banner-img">
-                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-                </div>
-                <?php endif; ?>
+            <div class="stocks-banner-slider">
+                <?php while(has_sub_field('main_screen_slider')): ?>
+                    <div class="stocks-banner-slide">
+                        <div class="stocks-banner-container">
+                            <?php if(get_sub_field('main_screen_text')): ?>
+                                <div class="stocks-banner-text">
+                                    <?php the_sub_field('main_screen_text'); ?>
+                                    <?php get_template_part('template-parts/sign', 'btn', ['name' => 'Записаться на прием', 'stocks' => get_sub_field('main_screen_title')]); ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php $img = get_sub_field('main_screen_img');
+                            if($img): ?>
+                                <div class="stocks-banner-img">
+                                    <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
             </div>
         </div>
         <?php if(get_field('advantages')): ?>
@@ -47,52 +53,7 @@ get_header();
     </div>
     <?php endif; ?>
 
-    <?php $services = get_field('service_cat', 'options');
-    $categories = get_categories( [
-        'taxonomy'     => 'category',
-        'type'         => 'post',
-        'parent'       => $services,
-        'orderby'      => 'date',
-        'order'        => 'DESC',
-        'hide_empty'   => 0,
-        'number'       => 0,
-        'pad_counts'   => false,
-    ] );
-
-    if( $categories ):
-    ?>
-    <div class="service">
-        <div class="container">
-            <div class="heading">
-                <h2>Услуги</h2>
-            </div>
-            <div class="service-container">
-                <?php
-                foreach( $categories as $cat ):
-                    $img = get_field('cat_img', 'category_'.$cat->term_id);
-                ?>
-                <div class="service-card" style="background: rgba(103, 205, 253, 0.05) url(<?php echo $img['url']; ?>) no-repeat right bottom">
-                    <div class="service-card-text">
-                        <div class="service-card-info">
-                            <h3><?php echo $cat->name; ?></h3>
-                            <?php if(get_field('description', 'category_'.$cat->term_id)) { the_field('description', 'category_'.$cat->term_id); } ?>
-                        </div>
-                        <div class="service-card-link">
-                            <a href="<?php echo get_page_link(get_field('price_page', 'options')); ?>">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-                <?php if(get_field('description', 'category_'.$services)): ?>
-                <div class="service-slogan">
-                    <?php the_field('description', 'category_'.$services); ?>
-                </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-    <?php endif;
-    wp_reset_postdata(); ?>
+    <?php get_template_part('template-parts/services', '', ['count' => 7, 'info' => true]); ?>
 
     <?php get_template_part('template-parts/about-us'); ?>
 
@@ -100,7 +61,7 @@ get_header();
 
     <?php get_template_part('template-parts/our', 'team', ['heading' => true]); ?>
 
-    <?php get_template_part('template-parts/reviews', ['count' => 3]); ?>
+    <?php get_template_part('template-parts/reviews', '', ['count' => 3]); ?>
 
     <?php get_template_part('template-parts/contact-form'); ?>
 

@@ -419,6 +419,10 @@ body {
 }
 
 /* Stock Banner */
+.stocks-banner-slider {
+  margin-bottom: 0 !important;
+  padding-bottom: 50px;
+}
 .stocks-banner-container {
   display: flex;
   justify-content: space-between;
@@ -1587,6 +1591,9 @@ body {
 }
 .single-page-content .reviews-card-author p {
   margin: 0;
+}
+.single-page-content .service {
+  padding: 0;
 }
 .single-page-content .about-us {
   padding-bottom: 0;

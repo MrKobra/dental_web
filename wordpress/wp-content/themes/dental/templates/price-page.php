@@ -42,7 +42,7 @@ get_header();
                 <?php the_content(); ?>
             </div>
         </div>
-        <?php get_template_part('template-parts/reviews', ['count' => 3]); ?>
+        <?php get_template_part('template-parts/reviews','', ['count' => 3]); ?>
         <?php get_template_part('template-parts/stocks-form'); ?>
     </div>
     <?php endif; ?>

@@ -1,1 +1,1 @@
-<a href="#request-popup" iс="popup-link" class="popup-link btnLight"><?php echo $args['name']; ?></a>
+<a href="#request-popup" id="popup-link" data-stocks="<?php if($args['stocks']){ echo $args['stocks']; } ?>" class="popup-link btnLight"><?php echo $args['name']; ?></a>

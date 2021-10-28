@@ -13,6 +13,11 @@ $(document).ready(function (){
             }
         ]
     })
+    // Слайдер с акциями
+    $('.stocks-banner-slider').slick({
+        arrows: false,
+        dots: true
+    })
     /* Табы */
     $('.dropdown-block.active').find('.dropdown-body').show()
     $('.dropdown-header').on('click', function(e){
@@ -65,9 +70,23 @@ $(document).ready(function (){
 
     /* Popup */
     $('.popup-link').each(function(){
-        console.log($(this));
         $(this).magnificPopup({
             type:'inline',
+            callbacks: {
+                close: function() {
+                    $('.popup-window input[name=stocks]').val('');
+                }
+            }
         });
+    })
+    $('.popup-link').on('click', function(){
+        var title = $(this).data('stocks');
+        $('.popup-window input[name=stocks]').val(title);
+    })
+
+    // Заполнение названия акции
+    $('.stocks-form').each(function(){
+        var title = $(this).find('.form-block-text h2').text();
+        $(this).find('input[name=stocks]').val(title);
     })
 })

@@ -17,7 +17,7 @@ get_header();
             <div class="container">
                 <div class="services-main-screen-text">
                     <h1><?php the_title(); ?></h1>
-                    <?php the_excerpt(); ?>
+                    <?php the_field('short_desc'); ?>
                     <div class="services-main-screen-btn">
                         <?php get_template_part('template-parts/sign', 'btn', ['name'=>'Записаться на прием']); ?>
                         <a href="<?php echo get_page_link(get_field('price_page', 'options')); ?>" class="btnDark">Помотреть цены</a>
