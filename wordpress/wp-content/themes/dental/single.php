@@ -63,7 +63,7 @@ get_header();
         <?php endif; ?>
         <?php get_template_part('template-parts/stocks-form'); ?>
 
-        <?php get_template_part('template-parts/reviews'); ?>
+        <?php get_template_part('template-parts/reviews', '', ['count' => 3]); ?>
     </div>
 
 <?php
