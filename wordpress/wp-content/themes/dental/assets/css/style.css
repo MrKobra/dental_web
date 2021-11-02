@@ -432,6 +432,9 @@ body {
   padding-left: 120px;
   box-sizing: border-box;
   flex-basis: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .stocks-banner-text span {
   font-size: 18px;
@@ -524,7 +527,7 @@ body {
   margin: 10px 0 50px;
   color: #6C6C6A;
 }
-.service-card p strong {
+.service-card p strong, .service-card p b {
   color: #38BCEA;
 }
 .service-card a {
@@ -2386,11 +2389,16 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .stocks-banner-container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
   .stocks-banner-img {
-    display: none;
+    flex-basis: 100%;
   }
   .stocks-banner-text {
     flex-basis: 100%;
+    margin-top: 15px;
   }
 
   .about-us-slider {

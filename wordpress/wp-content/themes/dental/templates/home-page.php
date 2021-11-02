@@ -12,8 +12,12 @@ get_header();
                         <div class="stocks-banner-container">
                             <?php if(get_sub_field('main_screen_text')): ?>
                                 <div class="stocks-banner-text">
-                                    <?php the_sub_field('main_screen_text'); ?>
-                                    <?php get_template_part('template-parts/sign', 'btn', ['name' => 'Записаться на прием', 'stocks' => get_sub_field('main_screen_title')]); ?>
+                                    <div class="stocks-banner-text_info">
+                                        <?php the_sub_field('main_screen_text'); ?>
+                                    </div>
+                                    <div class="stocks-banner_text_button">
+                                        <?php get_template_part('template-parts/sign', 'btn', ['name' => 'Записаться на прием', 'stocks' => get_sub_field('main_screen_title')]); ?>
+                                    </div>
                                 </div>
                             <?php endif; ?>
                             <?php $img = get_sub_field('main_screen_img');
