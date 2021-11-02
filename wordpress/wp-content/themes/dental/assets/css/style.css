@@ -668,6 +668,17 @@ body {
 }
 .form-block-container {
   padding: 80px;
+  position: relative;
+}
+.form-block-img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-block-img img {
+  max-width: 640px;
+  height: auto;
 }
 .form-block form .wpcf7-spinner {
   display: none !important;
@@ -754,12 +765,6 @@ body {
 .form-block-text span a:hover {
   color: #38BCEA;
   border-color: #38BCEA;
-}
-
-/* Stocks Form */
-.stocks-form .form-block-container {
-  background: url(../img/stocks-form.png) no-repeat right 50px;
-  background-size: 650px;
 }
 
 /* Our Team */
@@ -1705,6 +1710,11 @@ body {
 }
 
 @media (min-width: 1200px) and (max-width: 1360px) {
+  .form-block-img img {
+    max-width: 440px;
+    height: auto;
+  }
+
   .container {
     width: 1140px;
   }
@@ -1874,6 +1884,17 @@ body {
   }
 }
 @media (max-width: 1200px) {
+  .form-block-img {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .form-block-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .stocks-form .form-block-container {
     background: transparent !important;
   }
