@@ -524,6 +524,9 @@ body {
   margin: 10px 0 50px;
   color: #6C6C6A;
 }
+.service-card p strong {
+  color: #38BCEA;
+}
 .service-card a {
   font-size: 18px;
   line-height: 21px;
